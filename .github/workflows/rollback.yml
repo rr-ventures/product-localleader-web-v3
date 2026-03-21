@@ -1,0 +1,60 @@
+name: Rollback to Tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Git tag to roll back to (e.g. v1.0-stable)"
+        required: true
+        type: string
+      confirm:
+        description: "Type ROLLBACK to confirm"
+        required: true
+        type: string
+
+jobs:
+  rollback:
+    name: Rollback Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate confirmation
+        if: ${{ github.event.inputs.confirm != 'ROLLBACK' }}
+        run: |
+          echo "Confirmation text was not 'ROLLBACK'. Aborting."
+          exit 1
+
+      - name: Checkout tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag }}
+
+      - name: Verify tag exists
+        run: |
+          echo "Rolling back to tag: ${{ github.event.inputs.tag }}"
+          git log -1 --oneline
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site from tag
+        run: npx astro build
+
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli
+
+      - name: Deploy rollback to Railway
+        run: railway up --detach
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
+      - name: Log rollback
+        run: |
+          echo "Rollback complete. Production is now running tag: ${{ github.event.inputs.tag }}"
+          echo "Triggered by: ${{ github.actor }} at $(date -u)"
