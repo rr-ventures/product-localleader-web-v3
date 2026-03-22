@@ -6,6 +6,3 @@ buildCommand = "npm run build"
 startCommand = "npx serve dist --listen $PORT"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
-
-[[services]]
-name = "localleader-web"

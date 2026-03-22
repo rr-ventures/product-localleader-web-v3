@@ -50,7 +50,7 @@ jobs:
         run: npm install -g @railway/cli
 
       - name: Deploy rollback to Railway
-        run: railway up --detach
+        run: railway up --detach --service 27aba92f-dcbb-4c0f-b34d-089a67c2d743
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 

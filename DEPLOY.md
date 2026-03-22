@@ -16,7 +16,7 @@ Local changes → git push origin main → GitHub Actions → Railway Production
 ### 1. Create a Railway Project
 
 1. Go to [railway.app](https://railway.app) and create a new project
-2. Link it to the GitHub repo: `rr-ventures/product-localleader-web-v3`
+2. Link it to the GitHub repo: `rr-ventures/product-localleader-web`
 3. Railway → Project Settings → Tokens → Generate a token
 
 ### 2. Add the Token to GitHub
