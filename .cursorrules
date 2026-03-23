@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is an **Astro 4.x** site using **Tailwind CSS 3.x** for **Local Leader**, a local SEO service for Australian tradies (tradespeople). The site maintains **7 independent landing page designs** (v1–v7) with a hub page at `/` that links to each version.
+This is an **Astro 4.x** site using **Tailwind CSS 3.x** for **Local Leader**, a local SEO service for Australian tradies (tradespeople). The site maintains **multiple independent landing page designs** with a hub page at `/` that links to each version. Currently v1 and v3 are active — new versions can be added following the pattern below.
 
 **Live site:** localleader.au
 **Deployed on:** Railway (auto-deploys from `master` branch)
@@ -22,59 +22,43 @@ Each version is **fully isolated** — own layout, own page, own components. Ver
 src/
   layouts/
     Layout.astro          → v1 layout (imports shared Navbar + Footer)
-    LayoutV2.astro        → v2 layout (imports shared Footer)
     LayoutV3.astro        → v3 layout (self-contained, no shared nav/footer)
-    LayoutV4.astro        → v4 layout (self-contained)
-    LayoutV5.astro        → v5 layout (self-contained, DM Sans + DM Serif Display)
-    LayoutV6.astro        → v6 layout (self-contained, Plus Jakarta Sans + Lora)
-    LayoutV7.astro        → v7 layout (self-contained, Space Grotesk + Crimson Pro)
 
   pages/
     index.astro           → Hub/selector page (links to all versions)
     v1/index.astro        → Version 1 landing page
-    v2/index.astro        → Version 2 landing page
     v3/index.astro        → Version 3 landing page
-    v4/index.astro        → Version 4 landing page
-    v5/index.astro        → Version 5 landing page (scaffold)
-    v6/index.astro        → Version 6 landing page (scaffold)
-    v7/index.astro        → Version 7 landing page (scaffold)
 
   components/
     sections/             → v1 components (Hero, Pricing, FAQ, Testimonials, etc.)
     shared/               → Shared utility components (Button, Container, Paragraph, Title)
     cards/                → Card components (used by v1)
     blocks/               → Block components (used by v1)
-    v2/                   → v2-specific components (Hero, Navbar, FloatingCards, Features)
     v3/                   → v3-specific components (Hero, Header, LogoCloud, HowItWorks)
-    v5/                   → v5-specific components (Hero — starter)
-    v6/                   → v6-specific components (Hero — starter)
-    v7/                   → v7-specific components (Hero — starter)
 
 public/
   images/                 → Static images
-    hero.jpg              → v1/v2 hero image
+    hero.jpg              → v1 hero image
     hero-v3.jpg           → v3 hero image
-    hero-v4.jpg           → v4 hero image
     logo.jpg              → v1 logo
     logo-v3.jpg           → v3 logo
-    logo-v4.jpg           → v4 logo
 ```
 
 ---
 
-## How to Build a Version Page
+## How to Build a New Version Page
 
-When asked to build or redesign a version (e.g., "build v5"), follow these steps:
+When asked to build a new version (e.g., "build v4"), follow these steps:
 
-1. **Layout** — Open `src/layouts/LayoutV{N}.astro`. It already exists with fonts loaded. Modify if you need different fonts or body classes.
+1. **Layout** — Create `src/layouts/LayoutV{N}.astro`. Copy LayoutV3 as a template (self-contained, minimal). Change Google Fonts as needed.
 
-2. **Page** — Open `src/pages/v{N}/index.astro`. This is the main page file. Build sections inline here first — you can extract components later.
+2. **Page** — Create `src/pages/v{N}/index.astro`. Import the new layout. Build sections inline here first — you can extract components later.
 
 3. **Components** — As the page grows, extract sections into `src/components/v{N}/ComponentName.astro`. Import them in the page file.
 
 4. **Images** — Add version-specific images to `public/images/` using the naming convention: `hero-v{N}.jpg`, `logo-v{N}.jpg`, etc.
 
-5. **Hub** — After building, update the description in `src/pages/index.astro` for this version's card.
+5. **Hub** — After building, add a card linking to `/v{N}` in `src/pages/index.astro`.
 
 6. **VERSIONS.md** — **IMPORTANT:** After building or significantly updating a version, update `VERSIONS.md` in the project root with:
    - Build date
@@ -109,21 +93,18 @@ When asked to build or redesign a version (e.g., "build v5"), follow these steps
 ## Styling
 
 - **Tailwind CSS 3.x** — primary styling method
-- `darkMode: "class"` is configured but all versions are **light mode** (except v6 which is dark)
+- `darkMode: "class"` is configured but all versions are **light mode**
 - Custom Tailwind colors: `primary: "#1A73E8"` (Google blue)
 - Custom breakpoint: `midmd: 880px`
 
-### Font Pairings by Version
+### Current Font Pairings
 
 | Version | Primary Font | Accent Font | Visual Feel |
 |---------|-------------|-------------|-------------|
 | v1 | Raleway | — | Classic SaaS |
-| v2 | Raleway | Caveat (script), Playfair Display (serif) | Creative/playful |
 | v3 | Inter | Playfair Display | Premium minimal |
-| v4 | Inter | — | Dashboard/fintech |
-| v5 | DM Sans | DM Serif Display | Clean professional |
-| v6 | Plus Jakarta Sans | Lora | Dark editorial |
-| v7 | Space Grotesk | Crimson Pro | Bold experimental |
+
+New versions should use a **distinct font pairing** not already in use. Good options include: DM Sans, Space Grotesk, Plus Jakarta Sans, Outfit, Satoshi, General Sans paired with serif accents like Lora, Crimson Pro, DM Serif Display, Source Serif Pro.
 
 ---
 
