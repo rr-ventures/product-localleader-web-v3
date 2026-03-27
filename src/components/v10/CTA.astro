@@ -1,28 +1,35 @@
 ---
+const bookingUrl =
+  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0AghtsBW18FSrSjYsH1Y1yRHZYE0eTc_CeQkgGDs4PkqcP7PJy0m8X-iPuB8Z0BZfeSq93o3B0?gv=true";
 ---
 
-<section class="py-24 bg-slate-900 text-white relative overflow-hidden">
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/40 via-slate-900 to-slate-900"></div>
-  
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
-    <h2 class="text-4xl md:text-5xl font-serif mb-6">Ready to dominate your local area?</h2>
-    <p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-      Stop chasing leads and let the work come to you. Claim your spot before your competitors do.
-    </p>
-    
-    <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <a
-        href="https://calendar.app.google/ceK9b3Jr3KGD9cCs5"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-full text-slate-900 bg-white hover:bg-blue-50 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200"
-      >
-        Book a Free Strategy Session
-      </a>
+<section id="book-call" class="relative overflow-hidden bg-slate-900 py-24 text-white">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/35 via-slate-900 to-slate-900"></div>
+
+  <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="mb-6 text-4xl font-serif md:text-5xl">Book your free strategy call</h2>
+      <p class="mx-auto mb-12 max-w-2xl text-xl text-slate-300">
+        Pick a time on the page below and lock in your strategy session without leaving the site.
+      </p>
     </div>
-    
-    <p class="mt-6 text-sm text-slate-400">
-      Limited early bird spots available at $500/month.
-    </p>
+
+    <div class="overflow-hidden rounded-[2rem] border border-white/10 bg-white p-3 shadow-[0_28px_90px_rgba(15,23,42,0.45)]">
+      <iframe
+        src={bookingUrl}
+        title="Book a free strategy call"
+        class="min-h-[720px] w-full rounded-[1.4rem] bg-white"
+        style="border:0;"
+        width="100%"
+        height="720"
+        frameborder="0"
+      ></iframe>
+    </div>
+
+    <div class="mt-6 text-center">
+      <p class="text-sm text-slate-400">
+        If the booking widget has trouble loading, <a href={bookingUrl} target="_blank" rel="noopener noreferrer" class="font-medium text-white underline underline-offset-4">open the scheduler directly</a>.
+      </p>
+    </div>
   </div>
 </section>

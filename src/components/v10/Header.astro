@@ -1,27 +1,26 @@
 ---
+import Container from "../shared/Container.astro";
+import BrandLogo from "../shared/BrandLogo.astro";
 ---
 
-<header class="absolute w-full top-0 z-50 py-6 transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-20">
-      <div class="flex-shrink-0 flex items-center">
-        <a href="/v10" class="flex items-center gap-2">
-          <img src="/images/local-leader-logo-clean.png" alt="Local Leader" class="h-10 sm:h-12 w-auto object-contain" />
-        </a>
+<header class="absolute inset-x-0 top-0 z-50 py-6">
+  <Container>
+    <nav class="flex items-center justify-between gap-6">
+      <div class="min-w-max inline-flex relative">
+        <BrandLogo href="/v10" size="lg" className="relative" />
       </div>
-      <nav class="hidden md:flex space-x-8 items-center">
-        <a href="#how-it-works" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">How it Works</a>
-        <a href="#pricing" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-        <a href="#faq" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#how-it-works" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">How it Works</a>
+        <a href="#pricing" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Pricing</a>
+        <a href="#faq" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">FAQ</a>
         <a
-          href="https://calendar.app.google/ceK9b3Jr3KGD9cCs5"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-full text-white bg-slate-900 hover:bg-slate-800 shadow-sm hover:shadow-md transition-all duration-200"
+          href="#book-call"
+          class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-slate-900 text-sm font-medium text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-lg"
         >
           Book a Strategy Call
         </a>
-      </nav>
-    </div>
-  </div>
+      </div>
+    </nav>
+  </Container>
 </header>
