@@ -35,32 +35,72 @@ const { className } = Astro.props;
 
       <div class="mt-10 w-full flex flex-col gap-4">
         <div class="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
-          <BtnLink
-            text="Get Your Free Local Ranking Audit"
-            href="#cta"
-            variant="primary"
-            className="text-white text-center shadow-lg shadow-primary/30"
-          />
           <a
-            href="#cta"
-            class="px-8 py-3 rounded-full border border-box-border text-heading-2 font-medium hover:border-primary hover:text-primary hover:bg-white transition-all duration-300 ease-in-out text-center shadow-sm"
+            href="https://calendar.app.google/ceK9b3Jr3KGD9cCs5"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-4 rounded-full bg-primary text-white font-bold text-lg hover:bg-[#172554] transition-all duration-300 ease-in-out text-center shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-1"
           >
             Book a Strategy Call
           </a>
+          <BtnLink
+            text="Get Your Free Local Ranking Audit"
+            href="/v1/thank-you"
+            variant="secondary"
+            className="text-center font-semibold hover:bg-slate-50 hover:scale-105 transition-all duration-300"
+          />
         </div>
       </div>
     </div>
 
     <div
-      class="flex flex-1 lg:w-1/2 relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl justify-center lg:justify-end perspective-1000"
+      class="flex flex-1 lg:w-1/2 relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl justify-center lg:justify-end"
     >
-      <div class="relative w-full max-w-lg transform hover:scale-[1.02] transition-transform duration-500 ease-out">
-        <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl blur-3xl -z-10 transform translate-y-4"></div>
-        <Image
-          src={mapsBeforeAfter}
-          alt="Google Maps ranking transformation — before and after Local Leader"
-          class="w-full h-auto object-contain drop-shadow-2xl rounded-2xl"
-        />
+      <div class="relative w-full max-w-[38rem]">
+        <div class="absolute -inset-8 rounded-[2.5rem] bg-gradient-to-br from-sky-200/60 via-primary/10 to-emerald-100/40 blur-3xl"></div>
+        <div class="absolute left-8 top-10 hidden sm:flex items-center gap-3 rounded-2xl border border-white/80 bg-white/90 px-4 py-3 shadow-[0_22px_55px_rgba(15,23,42,0.12)] backdrop-blur">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 shadow-inner shadow-emerald-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4m10-8 6 8-6 8" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">Map Lift</p>
+            <p class="mt-1 text-sm font-semibold text-slate-900">From invisible to top-of-map visibility</p>
+          </div>
+        </div>
+        <div class="absolute -right-2 bottom-10 hidden sm:block rounded-[1.75rem] border border-slate-200/80 bg-white/95 p-5 shadow-[0_30px_70px_rgba(37,99,235,0.15)] backdrop-blur">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Typical outcome</p>
+          <div class="mt-3 flex items-end gap-4">
+            <div>
+              <p class="text-3xl font-bold text-slate-900">4.9</p>
+              <p class="text-sm text-slate-500">Average rating signal</p>
+            </div>
+            <div class="h-16 w-px bg-slate-200"></div>
+            <div>
+              <p class="text-3xl font-bold text-slate-900">Top 3</p>
+              <p class="text-sm text-slate-500">Google Maps placement</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/80 p-3 shadow-[0_35px_90px_rgba(15,23,42,0.16)] ring-1 ring-slate-200/60 backdrop-blur">
+          <div class="rounded-[1.6rem] bg-gradient-to-br from-slate-100 via-white to-sky-50 p-2">
+            <div class="mb-3 flex items-center justify-between rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-3">
+              <div class="flex items-center gap-2">
+                <span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
+                <p class="text-sm font-semibold text-slate-700">Google Maps visibility proof</p>
+              </div>
+              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">No ad spend</p>
+            </div>
+            <div class="overflow-hidden rounded-[1.45rem] border border-slate-200/80 bg-white shadow-inner shadow-slate-200/40">
+              <Image
+                src={mapsBeforeAfter}
+                alt="Google Maps ranking transformation — before and after Local Leader"
+                class="w-full h-auto object-contain scale-[1.01]"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </Container>
