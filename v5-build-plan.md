@@ -102,8 +102,9 @@ Build these sections in this order. The copy direction below is guidance — wri
 - **Subheadline:** Supporting angle + risk reduction. Something like: "We get you to the top of Google Maps, first page of Google, and build your 5-star reputation — no ad spend required."
 - **Primary CTA:** "Book a Free Strategy Session"
 - **Secondary CTA (optional):** "Request a Local Ranking Audit"
-- **Visual:** Choose a supporting proof stack from the asset bucket or build a visual element that reinforces proof/results
+- **Visual:** Use `_staging/graphics/dashboard-mockup.jpg` as the hero proof source.
 - **Hero art direction:** Do not sit the hero proof visual inside a large parent card, browser frame, or device mockup. The page background should show through immediately around and between the proof elements so the stack feels integrated with the page rather than boxed in.
+- **Hero composition rule:** Do not drop `dashboard-mockup.jpg` in as one giant boxed dashboard. Crop or deconstruct it into floating modules, panels, or KPI blocks so the background remains visible and the hero feels like a premium system snapshot rather than a screenshot on a card.
 - **Background treatment:** Use a visible premium texture or pattern behind the hero and upper page. It should read clearly as intentional atmosphere, not disappear into a mostly flat white background.
 
 ### Social Proof Strip
@@ -156,14 +157,15 @@ Build these sections in this order. The copy direction below is guidance — wri
 ### Graphics
 **Folder:** `_staging/graphics/` (38 files)
 
-Browse this folder and choose whichever graphics best support the design direction you derive from the reference screenshots. These include:
-- Before/after Google Maps proof graphics
-- Explainer and pillar graphics
-- Review/trust proof graphics
-- Hero card-stack visuals
-- Generated illustrative assets (dashboard mockups, gradient backgrounds, icon illustrations)
+Use these designated graphics for `v5` rather than choosing freely from the whole bucket:
+- **Hero proof source:** `_staging/graphics/dashboard-mockup.jpg`
+- **System / conversion explainer source:** `_staging/graphics/google-visibility-to-booked-jobs-conversion-path-01.jpg`
+- **Trust / authority proof source:** `_staging/graphics/obvious-choice-review-badge-proof-board-01.jpg`
 
-Copy your chosen assets to `public/images/` with version-prefixed names (e.g., `v5-hero-proof.jpg`).
+Asset handling rules:
+- Copy them to `public/images/` with version-prefixed names such as `v5-hero-proof.jpg`, `v5-conversion-system.jpg`, and `v5-review-proof.jpg`.
+- Do not reuse the v3 or v4 designated hero images in this version.
+- Keep the v5 visuals broader and more “all-in-one system” than v3/v4: the hero should suggest a complete operating system for local growth, not just a single proof card.
 
 ### Logos
 **Folder:** `_staging/logos/` (6 files)
@@ -176,7 +178,7 @@ Pick the logo that best fits your design aesthetic:
 - `logo-wordmark-rounded-medium-domain.jpg` — Rounded medium with .au (balanced)
 - `logo-wordmark-brand-preview-mockup.jpg` — Mockup scene (internal reference only)
 
-Copy your chosen logo to `public/images/` with a version-prefixed name (e.g., `v5-logo.jpg`).
+Use `logo-wordmark-rounded-bold-domain.jpg` for `v5`, then copy it to `public/images/` as `v5-logo.jpg`.
 
 ---
 

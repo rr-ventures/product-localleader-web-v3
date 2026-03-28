@@ -102,8 +102,9 @@ Build these sections in this order. The copy direction below is guidance — wri
 - **Subheadline:** Supporting angle + risk reduction. Something like: "We get you to the top of Google Maps, first page of Google, and build your 5-star reputation — no ad spend required."
 - **Primary CTA:** "Book a Free Strategy Session"
 - **Secondary CTA (optional):** "Request a Local Ranking Audit"
-- **Visual:** Choose a supporting proof stack from the asset bucket or build a visual element that reinforces proof/results
+- **Visual:** Use `_staging/graphics/page-one-search-ranking-proof-card-01.jpg` as the hero proof base.
 - **Hero art direction:** Do not sit the hero proof visual inside a large parent card, browser frame, or device mockup. The page background should show through immediately around and between the proof elements so the stack feels integrated with the page rather than boxed in.
+- **Hero composition rule:** Use `page-one-search-ranking-proof-card-01.jpg` as a featured floating search/result object, not a framed poster. Let the page background show immediately around it and pair it with restrained support chips or stat callouts rather than another large backing card.
 - **Background treatment:** Use a visible premium texture or pattern behind the hero and upper page. It should read clearly as intentional atmosphere, not disappear into a mostly flat white background.
 
 ### Social Proof Strip
@@ -156,14 +157,15 @@ Build these sections in this order. The copy direction below is guidance — wri
 ### Graphics
 **Folder:** `_staging/graphics/` (38 files)
 
-Browse this folder and choose whichever graphics best support the design direction you derive from the reference screenshots. These include:
-- Before/after Google Maps proof graphics
-- Explainer and pillar graphics
-- Review/trust proof graphics
-- Hero card-stack visuals
-- Generated illustrative assets (dashboard mockups, gradient backgrounds, icon illustrations)
+Use these designated graphics for `v4` rather than choosing freely from the whole bucket:
+- **Hero proof source:** `_staging/graphics/page-one-search-ranking-proof-card-01.jpg`
+- **Maps / local visibility proof source:** `_staging/graphics/neighbourhood-dominance-map-hero-01.jpg`
+- **Review / trust proof source:** `_staging/graphics/review-growth-to-market-leadership-01.jpg`
 
-Copy your chosen assets to `public/images/` with version-prefixed names (e.g., `v4-hero-proof.jpg`).
+Asset handling rules:
+- Copy them to `public/images/` with version-prefixed names such as `v4-hero-proof.jpg`, `v4-maps-proof.jpg`, and `v4-review-proof.jpg`.
+- Do not reuse the v3 or v5 designated hero images in this version.
+- Keep the v4 visual language cleaner and more product-like than v3: fewer layered proof cards, more focused feature objects with generous whitespace.
 
 ### Logos
 **Folder:** `_staging/logos/` (6 files)
@@ -176,7 +178,7 @@ Pick the logo that best fits your design aesthetic:
 - `logo-wordmark-rounded-medium-domain.jpg` — Rounded medium with .au (balanced)
 - `logo-wordmark-brand-preview-mockup.jpg` — Mockup scene (internal reference only)
 
-Copy your chosen logo to `public/images/` with a version-prefixed name (e.g., `v4-logo.jpg`).
+Use `logo-wordmark-rounded-medium-domain.jpg` for `v4`, then copy it to `public/images/` as `v4-logo.jpg`.
 
 ---
 

@@ -1,39 +1,26 @@
 ---
-import LayoutV4 from '../../layouts/LayoutV4.astro';
+import LayoutV4 from "../../layouts/LayoutV4.astro";
+import Header from "../../components/v4/Header.astro";
+import Hero from "../../components/v4/Hero.astro";
+import SocialProof from "../../components/v4/SocialProof.astro";
+import Pillars from "../../components/v4/Pillars.astro";
+import Pricing from "../../components/v4/Pricing.astro";
+import Testimonials from "../../components/v4/Testimonials.astro";
+import FAQ from "../../components/v4/FAQ.astro";
+import FinalCTA from "../../components/v4/FinalCTA.astro";
+import Footer from "../../components/v4/Footer.astro";
 ---
 
-<LayoutV4 title="Local Leader | Version 4 Scaffold">
-  <main class="mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center px-6 py-20 sm:px-10">
-    <div class="max-w-3xl">
-      <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Version 4</p>
-      <h1 class="text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl">
-        Version 4 is staged for the next <span class="font-serif italic">design direction</span>.
-      </h1>
-      <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-        This scaffold gives the next planning and build agents a clean route, layout, and component directory to work
-        from once the reference screenshots arrive.
-      </p>
-    </div>
-
-    <section class="mt-14 grid gap-6 md:grid-cols-3">
-      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <p class="text-sm font-semibold text-slate-900">Audience</p>
-        <p class="mt-3 text-sm leading-7 text-slate-600">
-          Australian tradies who want stronger visibility, better leads, and more control over their pipeline.
-        </p>
-      </div>
-      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <p class="text-sm font-semibold text-slate-900">Offer anchor</p>
-        <p class="mt-3 text-sm leading-7 text-slate-600">
-          Become the #1 tradie in your area with stronger Maps rankings, page-one visibility, and better reviews.
-        </p>
-      </div>
-      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <p class="text-sm font-semibold text-slate-900">Build status</p>
-        <p class="mt-3 text-sm leading-7 text-slate-600">
-          Scaffold only. This page is intentionally lightweight so it can be replaced quickly during the build phase.
-        </p>
-      </div>
-    </section>
+<LayoutV4 title="Local Leader | #1 Local SEO for Tradies">
+  <Header />
+  <main>
+    <Hero />
+    <SocialProof />
+    <Pillars />
+    <Pricing />
+    <Testimonials />
+    <FAQ />
+    <FinalCTA />
   </main>
+  <Footer />
 </LayoutV4>

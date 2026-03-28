@@ -1,0 +1,48 @@
+---
+import LayoutV3 from "../../layouts/LayoutV3.astro";
+import Header from "../../components/v3/Header.astro";
+import Footer from "../../components/v3/Footer.astro";
+---
+
+<LayoutV3 title="Thank You | Local Leader">
+  <Header />
+  <main class="min-h-screen flex flex-col items-center justify-center px-6 py-32 text-center relative overflow-hidden">
+    <!-- Subtle background texture -->
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+    <div class="max-w-2xl mx-auto relative z-10">
+      <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
+        <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      
+      <h1 class="text-4xl md:text-5xl font-serif font-medium text-slate-900 mb-6">Audit Request Received</h1>
+      
+      <p class="text-xl text-slate-600 mb-12">
+        We're running the numbers on your local market right now. While you wait, the fastest way to get your results is to book a quick strategy call.
+      </p>
+      
+      <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100 mb-12">
+        <h2 class="text-2xl font-serif font-medium text-slate-900 mb-4">Review Your Audit Live</h2>
+        <p class="text-slate-600 mb-8">Book a time below and we'll walk through your local ranking audit together, step by step.</p>
+        
+        <a
+          href="https://calendar.app.google/ceK9b3Jr3KGD9cCs5"
+          target="_blank"
+          class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-slate-900 rounded-full hover:bg-slate-800 transition-colors shadow-lg hover:shadow-xl w-full sm:w-auto"
+        >
+          Book Your Strategy Call
+        </a>
+      </div>
+      
+      <a href="/v3" class="text-slate-500 hover:text-slate-900 font-medium transition-colors inline-flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Back to home
+      </a>
+    </div>
+  </main>
+  <Footer />
+</LayoutV3>

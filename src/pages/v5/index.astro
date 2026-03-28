@@ -1,39 +1,28 @@
 ---
-import LayoutV5 from '../../layouts/LayoutV5.astro';
+import LayoutV5 from "../../layouts/LayoutV5.astro";
+import Header from "../../components/v5/Header.astro";
+import Hero from "../../components/v5/Hero.astro";
+import SocialProof from "../../components/v5/SocialProof.astro";
+import ThreePillars from "../../components/v5/ThreePillars.astro";
+import SystemExplainer from "../../components/v5/SystemExplainer.astro";
+import Pricing from "../../components/v5/Pricing.astro";
+import Testimonials from "../../components/v5/Testimonials.astro";
+import FAQ from "../../components/v5/FAQ.astro";
+import CTA from "../../components/v5/CTA.astro";
+import Footer from "../../components/v5/Footer.astro";
 ---
 
-<LayoutV5 title="Local Leader | Version 5 Scaffold">
-  <main class="mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center px-6 py-20 sm:px-10">
-    <div class="max-w-3xl">
-      <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Version 5</p>
-      <h1 class="text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl">
-        Another clean starting point for a <span class="font-serif italic">new concept</span>.
-      </h1>
-      <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-        Version 5 is ready for a separate reference-led build so each landing page can stay isolated while still using
-        the same Local Leader brand system and offer.
-      </p>
-    </div>
-
-    <section class="mt-14 grid gap-6 md:grid-cols-3">
-      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <p class="text-sm font-semibold text-slate-900">Conversion target</p>
-        <p class="mt-3 text-sm leading-7 text-slate-600">
-          Drive strategy-session bookings with proof-led messaging and clear CTA repetition.
-        </p>
-      </div>
-      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <p class="text-sm font-semibold text-slate-900">Build input pack</p>
-        <p class="mt-3 text-sm leading-7 text-slate-600">
-          Use the organised asset library, the updated brand docs, and the uploaded version-specific screenshots.
-        </p>
-      </div>
-      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <p class="text-sm font-semibold text-slate-900">Build status</p>
-        <p class="mt-3 text-sm leading-7 text-slate-600">
-          Scaffold only. This route exists so the planning and implementation agents can work independently.
-        </p>
-      </div>
-    </section>
+<LayoutV5 title="Local Leader | Dominate Your Local Market">
+  <Header />
+  <main>
+    <Hero />
+    <SocialProof />
+    <ThreePillars />
+    <SystemExplainer />
+    <Pricing />
+    <Testimonials />
+    <FAQ />
+    <CTA />
   </main>
+  <Footer />
 </LayoutV5>

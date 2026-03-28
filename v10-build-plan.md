@@ -102,7 +102,10 @@ Build these sections in this order. The copy direction below is guidance -- writ
 - **Subheadline:** Supporting angle + risk reduction. Something like: "We get you to the top of Google Maps, first page of Google, and build your 5-star reputation — no ad spend required."
 - **Primary CTA:** "Book a Free Strategy Session"
 - **Secondary CTA (optional):** "Request a Local Ranking Audit"
-- **Visual:** Choose a supporting graphic from the asset bucket or build a visual element that reinforces proof/results
+- **Visual:** Use `_staging/graphics/performance-dashboard-proof-cards-01.jpg` as the hero proof source.
+- **Hero art direction:** Do not place the hero proof inside a large parent card, browser frame, or device shell. The page background should remain visible around and between the proof elements.
+- **Hero composition rule:** Treat `performance-dashboard-proof-cards-01.jpg` as source material to crop, mask, or recompose. Break it into layered floating proof cards and remove the outer backing panel feel so the result reads like premium proof on the page background, not an image inside another card.
+- **Background treatment:** Use a visible premium texture or pattern behind the hero and upper page. It should be clearly perceptible rather than so subtle that the page reads as flat white.
 
 ### Social Proof Strip
 - Lightweight trust signal directly after or near the hero
@@ -115,12 +118,15 @@ Build these sections in this order. The copy direction below is guidance -- writ
 - Frame as what the prospect gets, not what we do
 
 ### Pricing
-- **Tier 1:** ~~$2,000/month~~ → **$500/month** — EARLY BIRD OFFER
+- **Tier 1:** **Local Leader Package** — ~~$2,000/month~~ → **$500/month** — EARLY BIRD OFFER
+- Early bird treatment should be visually prominent.
 - Framing: Limited spots. Founding client pricing. You keep that rate as long as you stay.
 - Clean presentation: "Everything above. One price. No surprises."
 - No ad spend required. No lock-in after initial 3-month commitment. Month-to-month after that.
 - ROI framing: "What's your average job worth? One extra customer from Google more than covers it."
-- **Tier 2 (optional):** Minimal mention. "For businesses ready to take the next step." Custom pricing — book a call. 3-4 lines max.
+- **Tier 2:** **Brand & Authority Package** — custom pricing
+- Tier 2 includes website design/refresh, logos and branding assets, social media post design, graphic design support, email signatures, and professional business email setup.
+- Presentation: Use two pricing cards. The Local Leader Package should be the more prominent primary offer, while the Brand & Authority Package should read as a secondary custom-scope upsell.
 
 ### Testimonials
 - Placeholder testimonials (3-4)
@@ -151,14 +157,14 @@ Build these sections in this order. The copy direction below is guidance -- writ
 ### Graphics
 **Folder:** `_staging/graphics/` (38 files)
 
-Browse this folder and choose whichever graphics best support the design direction you derive from the reference screenshots. These include:
-- Before/after Google Maps proof graphics
-- Explainer and pillar graphics
-- Review/trust proof graphics
-- Hero card-stack visuals
-- Generated illustrative assets (dashboard mockups, gradient backgrounds, icon illustrations)
+Use these designated graphics for `v10`:
+- **Hero proof source:** `_staging/graphics/performance-dashboard-proof-cards-01.jpg`
+- **Review / testimonial proof source:** `_staging/graphics/obvious-choice-review-badge-proof-board-01.jpg`
+- **Optional process / explainer source:** `_staging/graphics/local-ranking-three-step-process-01.jpg`
 
-Copy your chosen assets to `public/images/` with version-prefixed names (e.g., `v10-hero-proof.jpg`).
+Asset handling rules:
+- Copy them to `public/images/` with version-prefixed names such as `v10-hero-proof.jpg`, `v10-review-proof.jpg`, and `v10-process.jpg`.
+- Do not simply place the raw hero source file inside another rounded wrapper. Recompose it so the proof elements sit directly on the page atmosphere.
 
 ### Logos
 **Folder:** `_staging/logos/` (6 files)

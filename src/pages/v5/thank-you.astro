@@ -1,0 +1,51 @@
+---
+import LayoutV5 from "../../layouts/LayoutV5.astro";
+import Header from "../../components/v5/Header.astro";
+import Footer from "../../components/v5/Footer.astro";
+---
+
+<LayoutV5 title="Thank You | Local Leader">
+  <Header />
+  
+  <main class="min-h-screen pt-32 pb-20 flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none"></div>
+    
+    <div class="max-w-2xl mx-auto px-6 text-center relative z-10">
+      <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      
+      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
+        Audit Request Received
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed">
+        We're running the numbers on your local market right now. While you wait, the fastest way to get your results is to book a quick 15-minute strategy call.
+      </p>
+      
+      <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 mb-10">
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">Fast-track your results</h3>
+        <p class="text-slate-600 mb-8">Lock in a time to review your audit and see exactly what it takes to hit the #1 spot in your area.</p>
+        
+        <a 
+          href="https://calendar.app.google/ceK9b3Jr3KGD9cCs5"
+          target="_blank"
+          class="inline-flex justify-center items-center w-full bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-700 transition-all shadow-lg shadow-orange-600/20"
+        >
+          Book Your Strategy Call Now
+        </a>
+      </div>
+      
+      <a href="/v5" class="text-slate-500 font-medium hover:text-slate-900 transition-colors inline-flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+        </svg>
+        Back to home
+      </a>
+    </div>
+  </main>
+  
+  <Footer />
+</LayoutV5>
