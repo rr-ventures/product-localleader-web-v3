@@ -102,7 +102,9 @@ Build these sections in this order. The copy direction below is guidance -- writ
 - **Subheadline:** Supporting angle + risk reduction. Something like: "We get you to the top of Google Maps, first page of Google, and build your 5-star reputation — no ad spend required."
 - **Primary CTA:** "Book a Free Strategy Session"
 - **Secondary CTA (optional):** "Request a Local Ranking Audit"
-- **Visual:** Choose a supporting graphic from the asset bucket or build a visual element that reinforces proof/results
+- **Visual:** Choose a supporting proof stack from the asset bucket or build a visual element that reinforces proof/results
+- **Hero art direction:** Do not sit the hero proof visual inside a large parent card, browser frame, or device mockup. The page background should show through immediately around and between the proof elements so the stack feels integrated with the page rather than boxed in.
+- **Background treatment:** Use a visible premium texture or pattern behind the hero and upper page. It should read clearly as intentional atmosphere, not disappear into a mostly flat white background.
 
 ### Social Proof Strip
 - Lightweight trust signal directly after or near the hero
@@ -115,12 +117,15 @@ Build these sections in this order. The copy direction below is guidance -- writ
 - Frame as what the prospect gets, not what we do
 
 ### Pricing
-- **Tier 1:** ~~$2,000/month~~ → **$500/month** — EARLY BIRD OFFER
+- **Tier 1:** **Local Leader Package** — ~~$2,000/month~~ → **$500/month** — EARLY BIRD OFFER
+- Early bird treatment should be visually prominent.
 - Framing: Limited spots. Founding client pricing. You keep that rate as long as you stay.
 - Clean presentation: "Everything above. One price. No surprises."
 - No ad spend required. No lock-in after initial 3-month commitment. Month-to-month after that.
 - ROI framing: "What's your average job worth? One extra customer from Google more than covers it."
-- **Tier 2 (optional):** Minimal mention. "For businesses ready to take the next step." Custom pricing — book a call. 3-4 lines max.
+- **Tier 2:** **Brand & Authority Package** — custom pricing
+- Tier 2 includes website design/refresh, logos and branding assets, social media post design, graphic design support, email signatures, and professional business email setup.
+- Presentation: Use two pricing cards. The Local Leader Package should be the more prominent primary offer, while the Brand & Authority Package should read as a secondary custom-scope upsell.
 
 ### Testimonials
 - Placeholder testimonials (3-4)

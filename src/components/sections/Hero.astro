@@ -14,7 +14,9 @@ export interface Props {
 const { className } = Astro.props;
 ---
 
-<section class=`relative pt-32 lg:pt-36 bg-slate-50/50 ${className}`>
+<section class=`relative overflow-hidden pt-32 lg:pt-36 bg-slate-50/65 ${className}`>
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_16%_20%,rgba(191,219,254,0.55),transparent_24%),radial-gradient(circle_at_78%_12%,rgba(255,255,255,0.92),transparent_28%)]"></div>
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(#d3dce8_1px,transparent_1px)] [background-size:20px_20px] opacity-65"></div>
   <Container className={"flex flex-col lg:flex-row gap-10 lg:gap-12 items-center"}>
     <div
       class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8
@@ -83,24 +85,12 @@ const { className } = Astro.props;
             </div>
           </div>
         </div>
-        <div class="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/80 p-3 shadow-[0_35px_90px_rgba(15,23,42,0.16)] ring-1 ring-slate-200/60 backdrop-blur">
-          <div class="rounded-[1.6rem] bg-gradient-to-br from-slate-100 via-white to-sky-50 p-2">
-            <div class="mb-3 flex items-center justify-between rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-3">
-              <div class="flex items-center gap-2">
-                <span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
-                <p class="text-sm font-semibold text-slate-700">Google Maps visibility proof</p>
-              </div>
-              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">No ad spend</p>
-            </div>
-            <div class="overflow-hidden rounded-[1.45rem] border border-slate-200/80 bg-white shadow-inner shadow-slate-200/40">
-              <Image
-                src={mapsBeforeAfter}
-                alt="Google Maps ranking transformation — before and after Local Leader"
-                class="w-full h-auto object-contain scale-[1.01]"
-              />
-            </div>
-          </div>
-        </div>
+        <div class="absolute inset-x-[18%] bottom-4 h-12 rounded-full bg-slate-900/12 blur-3xl"></div>
+        <Image
+          src={mapsBeforeAfter}
+          alt="Google Maps ranking transformation — before and after Local Leader"
+          class="relative w-full h-auto object-contain drop-shadow-[0_34px_70px_rgba(15,23,42,0.18)]"
+        />
       </div>
     </div>
   </Container>
