@@ -1,0 +1,48 @@
+---
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+
+import { faqs } from "../../utils/data";
+import GradiantText from "../shared/GradiantText.astro";
+
+type FAQProps = {
+  question: string;
+  answer: string;
+};
+
+export interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<section id="faq" class=`${className}`}>
+  <Container>
+    <div class="mx-auto max-w-3xl space-y-4 text-center">
+      <Title>Frequently Asked <GradiantText>Questions</GradiantText></Title>
+    </div>
+
+    <div
+      class="mx-auto mt-12 grid max-w-3xl divide-y divide-slate-200 overflow-hidden rounded-3xl border border-box-border bg-box-bg shadow-lg"
+    >
+      {
+        faqs.map((faq: FAQProps) => {
+          return (
+            <div class="px-8 py-6 transition-colors duration-200 hover:bg-slate-50">
+              <div class="flex flex-col gap-3">
+                <h3 class="text-lg font-bold text-heading-1">
+                  {faq.question}
+                </h3>
+                <Paragraph className="leading-relaxed text-heading-3">
+                  {faq.answer}
+                </Paragraph>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </Container>
+</section>

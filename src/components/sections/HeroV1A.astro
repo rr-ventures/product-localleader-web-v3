@@ -1,0 +1,98 @@
+---
+import { Image } from "astro:assets";
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import BtnLink from "../shared/BtnLink.astro";
+import GradiantText from "../shared/GradiantText.astro";
+
+import mapsBeforeAfter from "../../../public/images/v1-feedback/before-after-maps-transparent.png";
+
+export interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<section class=`relative overflow-hidden bg-slate-50/70 pt-32 lg:pt-36 ${className}`}>
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_16%_20%,rgba(191,219,254,0.55),transparent_24%),radial-gradient(circle_at_78%_12%,rgba(255,255,255,0.92),transparent_28%)]"></div>
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(#d3dce8_1px,transparent_1px)] [background-size:20px_20px] opacity-65"></div>
+  <Container className={"flex flex-col items-center gap-12 lg:flex-row lg:gap-10 xl:gap-14"}>
+    <div
+      class="relative mx-auto flex max-w-3xl flex-col items-center text-center lg:mx-0 lg:w-[48%] lg:max-w-none lg:items-start lg:py-7 lg:text-left xl:py-8"
+    >
+      <h1
+        class="text-4xl/tight font-bold tracking-tight text-heading-1 sm:text-5xl/tight md:text-6xl/tight xl:text-7xl/tight"
+      >
+        Become the <GradiantText>#1 tradie</GradiantText> in your area.
+      </h1>
+      <Paragraph className="mt-8 text-lg text-heading-3 md:text-xl">
+        Your phone ringing with jobs you actually want. No ad spend. No chasing
+        leads. Just your business showing up first on Google Maps, first on
+        Google Search, with more 5-star reviews than anyone else in your area —
+        every single month.
+      </Paragraph>
+
+      <div class="mt-10 flex w-full flex-col items-center gap-4 lg:items-start">
+        <div class="flex w-full flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
+          <a
+            href="https://calendly.com/reece-localleader/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full rounded-full bg-primary px-8 py-4 text-center text-lg font-bold text-white shadow-lg shadow-primary/30 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-[#172554] hover:shadow-primary/50 sm:w-auto"
+          >
+            Book a Strategy Call
+          </a>
+          <BtnLink
+            text="Get Your Free Local Ranking Audit"
+            href="/v1a/thank-you"
+            variant="secondary"
+            className="inline-flex w-full items-center justify-center text-center font-semibold transition-all duration-300 hover:scale-105 hover:bg-slate-50 sm:w-auto"
+          />
+        </div>
+        <p class="text-sm font-medium text-heading-3/90">
+          Free audit, no obligation, and built around your actual suburb + trade.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="relative flex flex-1 justify-center lg:w-[52%] lg:justify-end"
+    >
+      <div class="relative w-full max-w-[44rem] lg:max-w-[46rem]">
+        <div class="absolute -inset-x-2 top-8 h-[72%] rounded-[3rem] bg-gradient-to-br from-sky-200/55 via-blue-100/25 to-emerald-100/35 blur-3xl"></div>
+        <div class="absolute left-6 top-6 hidden items-center gap-3 rounded-2xl border border-white/70 bg-white/80 px-4 py-3 shadow-[0_18px_45px_rgba(15,23,42,0.12)] backdrop-blur md:flex">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 shadow-inner shadow-emerald-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4m10-8 6 8-6 8" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">Map Lift</p>
+            <p class="mt-1 text-sm font-semibold text-slate-900">From buried listings to visible local demand</p>
+          </div>
+        </div>
+        <div class="absolute -right-1 bottom-12 hidden rounded-[1.75rem] border border-slate-200/80 bg-white/90 p-5 shadow-[0_28px_70px_rgba(37,99,235,0.14)] backdrop-blur lg:block">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Typical outcome</p>
+          <div class="mt-3 flex items-end gap-4">
+            <div>
+              <p class="text-3xl font-bold text-slate-900">4.9</p>
+              <p class="text-sm text-slate-500">Average rating signal</p>
+            </div>
+            <div class="h-16 w-px bg-slate-200"></div>
+            <div>
+              <p class="text-3xl font-bold text-slate-900">Top 3</p>
+              <p class="text-sm text-slate-500">Google Maps placement</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-x-[14%] bottom-4 h-16 rounded-full bg-slate-900/14 blur-3xl"></div>
+        <Image
+          src={mapsBeforeAfter}
+          alt="Google Maps ranking transformation — before and after Local Leader"
+          class="relative z-10 w-full scale-[1.08] object-contain drop-shadow-[0_40px_80px_rgba(15,23,42,0.2)]"
+        />
+      </div>
+    </div>
+  </Container>
+</section>

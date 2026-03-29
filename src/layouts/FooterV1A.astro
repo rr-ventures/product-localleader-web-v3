@@ -1,0 +1,144 @@
+---
+import GroupFooterNav from "../components/blocks/GroupFooterNav.astro";
+import Container from "../components/shared/Container.astro";
+import BrandLogo from "../components/shared/BrandLogo.astro";
+import FooterNav from "../components/shared/FooterNav.astro";
+import Paragraph from "../components/shared/Paragraph.astro";
+
+const quickLinks = [
+  { itemText: "How It Works", itemLink: "/v1a#how-it-works" },
+  { itemText: "Pricing", itemLink: "/v1a#pricing" },
+  { itemText: "Reviews", itemLink: "/v1a#reviews" },
+  { itemText: "FAQ", itemLink: "/v1a#faq" },
+];
+
+const getInTouch = [
+  { itemText: "Get a Free Audit", itemLink: "/v1a/thank-you" },
+  { itemText: "Book a Strategy Call", itemLink: "https://calendly.com/reece-localleader/30min" },
+  { itemText: "Contact Us", itemLink: "mailto:hello@localleader.au" },
+];
+---
+
+<div class="relative mt-16">
+  <span
+    class="absolute bottom-1/3 left-1/3 h-20 w-20 rounded-full bg-gradient-to-br from-sky-500 from-0% via-primary via-80% to-green-600 to-110%"
+  ></span>
+  <span
+    class="absolute right-1 top-2/4 h-40 w-40 rounded-full bg-gradient-to-br from-yellow-400 via-sky-700 to-primary"
+  ></span>
+  <span
+    class="absolute bottom-0 right-1/4 h-40 w-40 rounded-full bg-gradient-to-br from-sky-500 from-0% via-primary via-80% to-green-600 to-110%"
+  ></span>
+  <span
+    class="absolute right-1/3 top-1/3 h-20 w-20 rounded-full bg-gradient-to-br from-green-500 from-0% via-primary via-80% to-sky-600 to-110%"
+  ></span>
+  <span
+    class="absolute left-0 top-1/3 h-40 w-40 rounded-full bg-gradient-to-br from-green-500 from-0% via-primary via-80% to-sky-600 to-110%"
+  ></span>
+
+  <footer
+    class="relative rounded-t-3xl bg-gradient-to-tr from-slate-100/85 to-zinc-200/85 pt-28 backdrop-blur-md"
+  >
+    <Container className="relative overflow-auto pb-8">
+      <div class="relative grid grid-cols-2 gap-8 lg:grid-cols-3 lg:items-stretch">
+        <div class="col-span-2 flex h-auto flex-col lg:col-span-1">
+          <div class="h-full">
+            <BrandLogo href="/v1a" size="md" />
+            <Paragraph className={"mt-4"}>
+              We make you the #1 tradie in your area — on Google Maps, Google Search, and in reviews.
+            </Paragraph>
+            <p class="mt-4 text-sm text-heading-3">
+              <a href="https://localleader.au" class="transition hover:text-heading-1">localleader.au</a>
+              &nbsp;·&nbsp;
+              <a href="mailto:hello@localleader.au" class="transition hover:text-heading-1">hello@localleader.au</a>
+            </p>
+          </div>
+
+          <div class="mt-8 flex min-h-max items-center gap-4 text-heading-3">
+            <a href="#" class="transition hover:scale-105 hover:text-heading-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="h-5 w-5"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                ></path>
+              </svg>
+              <span class="sr-only">Facebook</span>
+            </a>
+
+            <a href="#" class="transition hover:scale-105 hover:text-heading-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="h-5 w-5"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.087 3.268.222 2.758.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.704.01 5.555 0 5.829 0 8c0 2.171.01 2.445.048 3.297.039.854.174 1.436.372 1.944.205.527.478.974.922 1.418.444.444.89.717 1.418.922.508.198 1.09.333 1.944.372C5.555 15.99 5.829 16 8 16c2.171 0 2.445-.01 3.297-.048.854-.039 1.436-.174 1.944-.372a3.9 3.9 0 0 0 1.418-.922c.444-.444.717-.89.922-1.418.198-.508.333-1.09.372-1.944C15.99 10.445 16 10.171 16 8c0-2.171-.01-2.445-.048-3.297-.039-.854-.174-1.436-.372-1.944a3.9 3.9 0 0 0-.922-1.418A3.9 3.9 0 0 0 13.24.42c-.508-.198-1.09-.333-1.944-.372C10.445.01 10.171 0 8 0zm0 1.441c2.135 0 2.389.008 3.231.047.778.036 1.2.165 1.48.273.372.144.638.317.917.596.279.279.452.545.596.917.108.28.237.702.273 1.48.039.842.047 1.096.047 3.231s-.008 2.389-.047 3.231c-.036.778-.165 1.2-.273 1.48a2.46 2.46 0 0 1-.596.917 2.46 2.46 0 0 1-.917.596c-.28.108-.702.237-1.48.273-.842.039-1.096.047-3.231.047s-2.389-.008-3.231-.047c-.778-.036-1.2-.165-1.48-.273a2.46 2.46 0 0 1-.917-.596 2.46 2.46 0 0 1-.596-.917c-.108-.28-.237-.702-.273-1.48C1.449 10.389 1.441 10.135 1.441 8s.008-2.389.047-3.231c.036-.778.165-1.2.273-1.48.144-.372.317-.638.596-.917.279-.279.545-.452.917-.596.28-.108.702-.237 1.48-.273.842-.039 1.096-.047 3.231-.047zm0 2.467A4.092 4.092 0 1 0 8 12.092 4.092 4.092 0 0 0 8 3.908zm0 6.743A2.651 2.651 0 1 1 8 5.349a2.651 2.651 0 0 1 0 5.302zm5.205-6.905a.956.956 0 1 1-.956-.956.956.956 0 0 1 .956.956z"
+                ></path>
+              </svg>
+              <span class="sr-only">Instagram</span>
+            </a>
+
+            <a href="#" class="transition hover:scale-105 hover:text-heading-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="h-5 w-5"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                ></path>
+              </svg>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <GroupFooterNav>
+          <FooterNav title={"Quick Links"} navItems={quickLinks} />
+          <FooterNav title={"Get in Touch"} navItems={getInTouch} />
+        </GroupFooterNav>
+
+        <div class="col-span-2 flex flex-col justify-center lg:col-span-1">
+          <div class="rounded-2xl border border-box-border bg-gradient-to-br from-indigo-50 to-blue-50 p-6">
+            <p class="text-sm font-semibold text-heading-1">Ready to own your area?</p>
+            <p class="mt-2 text-sm text-heading-3">
+              Start with a free Google ranking audit — we'll show you exactly where you stand.
+            </p>
+            <a
+              href="/v1a/thank-you"
+              class="mt-4 inline-block rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:scale-105 hover:opacity-90"
+            >
+              Get Your Free Audit
+            </a>
+          </div>
+        </div>
+      </div>
+    </Container>
+    <div class="relative py-4">
+      <Container>
+        <div
+          class="flex flex-col items-center justify-between gap-3 text-sm text-heading-3 sm:flex-row"
+        >
+          <div>
+            &copy; <span id="year"></span> Local Leader. Australian-owned and operated.
+          </div>
+          <div class="text-xs">
+            ABN placeholder · <a href="#" class="transition hover:text-heading-1">Privacy Policy</a> · <a href="#" class="transition hover:text-heading-1">Terms</a>
+          </div>
+        </div>
+      </Container>
+    </div>
+  </footer>
+</div>

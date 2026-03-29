@@ -1,0 +1,92 @@
+---
+import Container from "../components/shared/Container.astro";
+import BrandLogo from "../components/shared/BrandLogo.astro";
+import Navitem from "../components/shared/Navitem.astro";
+
+const navItems = [
+  {
+    href: "/v1a#how-it-works",
+    text: "How It Works",
+  },
+  {
+    href: "/v1a#pricing",
+    text: "Pricing",
+  },
+  {
+    href: "/v1a#reviews",
+    text: "Reviews",
+  },
+  {
+    href: "/v1a#faq",
+    text: "FAQ",
+  },
+];
+---
+
+<header class="absolute inset-x-0 top-0 z-50 py-6">
+  <Container>
+    <nav class="relative flex w-full justify-between gap-6">
+      <div class="relative inline-flex min-w-max">
+        <BrandLogo href="/v1a" size="lg" className="relative" />
+      </div>
+
+      <div
+        data-nav-overlay
+        aria-hidden="true"
+        class="fixed hidden inset-0 bg-box-bg bg-opacity-50 backdrop-filter backdrop-blur-xl lg:!hidden"
+      >
+      </div>
+      <div
+        data-navbar
+        class="absolute top-full flex h-0 w-full flex-col gap-x-4 gap-y-6 overflow-hidden border-x border-x-box-border bg-body duration-300 ease-linear lg:relative lg:top-0 lg:!h-auto lg:w-full lg:scale-y-100 lg:flex-row lg:items-center lg:justify-between lg:border-x-0 lg:bg-transparent"
+      >
+        <ul
+          class="flex w-full flex-col gap-x-3 gap-y-4 border-t border-box-border px-6 pt-6 text-lg text-heading-2 lg:flex-row lg:items-center lg:justify-center lg:border-t-0 lg:px-0 lg:pt-0"
+        >
+          {
+            navItems.map((item) => {
+              return <Navitem {...item} />;
+            })
+          }
+        </ul>
+
+        <div
+          class="flex w-full items-center border-b border-box-bg px-6 pb-6 sm:w-max lg:min-w-max lg:border-0 lg:px-0 lg:pb-0"
+        >
+          <a
+            href="https://calendly.com/reece-localleader/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex w-full justify-center rounded-full bg-primary px-6 py-3 font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#172554] hover:shadow-lg sm:w-max"
+          >
+            Book a Strategy Call
+          </a>
+        </div>
+      </div>
+
+      <div class="flex min-w-max items-center gap-x-3">
+        <button data-switch-theme class="hidden" aria-hidden="true"></button>
+
+        <button
+          data-toggle-nav
+          data-open-nav="false"
+          class="relative flex h-auto w-7 flex-col outline-none lg:hidden lg:invisible"
+        >
+          <span
+            id="line1"
+            class="h-0.5 w-6 rounded-full bg-heading-2 transition-all duration-300 ease-linear"
+          ></span>
+          <span
+            id="line2"
+            class="mt-1 h-0.5 w-6 origin-center rounded-ful bg-heading-2 transition-all duration-300 ease-linear"
+          ></span>
+          <span
+            id="line3"
+            class="mt-1 h-0.5 w-6 rounded-ful bg-heading-2 transition-all duration-300 ease-linear"
+          ></span>
+          <span class="sr-only">togglenav</span>
+        </button>
+      </div>
+    </nav>
+  </Container>
+</header>
