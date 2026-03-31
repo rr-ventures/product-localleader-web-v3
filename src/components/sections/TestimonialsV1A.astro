@@ -6,19 +6,19 @@ import GradiantText from "../shared/GradiantText.astro";
 const testimonials = [
   {
     quote:
+      "Finally someone who speaks my language. No jargon, no fluff. Just results.",
+    name: "Jake R.",
+    trade: "Concreter",
+    location: "Western Sydney, NSW",
+    reviewAge: "6 days ago",
+  },
+  {
+    quote:
       "Within 8 weeks my phone was ringing with jobs I didn't have to quote against three other blokes for.",
     name: "Dave M.",
     trade: "Electrician",
     location: "Newcastle, NSW",
     reviewAge: "2 weeks ago",
-  },
-  {
-    quote:
-      "I'd been burned by two agencies before. These guys just showed me the data, told me what they'd do, and did it. No BS.",
-    name: "Sarah T.",
-    trade: "Plumber",
-    location: "Gold Coast, QLD",
-    reviewAge: "1 month ago",
   },
   {
     quote:
@@ -30,11 +30,11 @@ const testimonials = [
   },
   {
     quote:
-      "Finally someone who speaks my language. No jargon, no fluff. Just results.",
-    name: "Jake R.",
-    trade: "Concreter",
-    location: "Western Sydney, NSW",
-    reviewAge: "6 days ago",
+      "I'd been burned by two agencies before. These guys just showed me the data, told me what they'd do, and did it. No BS.",
+    name: "Sarah T.",
+    trade: "Plumber",
+    location: "Gold Coast, QLD",
+    reviewAge: "1 month ago",
   },
 ];
 
@@ -42,19 +42,21 @@ const stars = Array.from({ length: 5 });
 
 export interface Props {
   className?: string;
+  audience?: "tradie" | "business";
 }
 
-const { className } = Astro.props;
+const { className, audience = "tradie" } = Astro.props;
 ---
 
 <section id="reviews" class=`${className}`}>
   <Container className="space-y-12">
     <div class="mx-auto max-w-3xl space-y-4 text-center">
       <Title>
-        Tradies who stopped <GradiantText>chasing work</GradiantText>
+        {audience === "tradie" ? "Tradies" : "Businesses"} who stopped{" "}
+        <GradiantText>chasing work</GradiantText>
       </Title>
       <p class="text-heading-3 md:text-lg">
-        Real results from Australian trade businesses, presented with the kind of social proof locals already trust.
+        Real local proof from Australian operators already winning quality jobs from Google.
       </p>
     </div>
 
@@ -72,9 +74,6 @@ const { className } = Astro.props;
                     <p class="text-sm font-semibold text-heading-1">{t.name}</p>
                     <p class="text-xs text-heading-3">{t.trade} · {t.location}</p>
                   </div>
-                </div>
-                <div class="rounded-full bg-blue-50 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-primary">
-                  Google
                 </div>
               </div>
 
@@ -96,12 +95,6 @@ const { className } = Astro.props;
               </p>
             </div>
 
-            <div class="mt-7 border-t border-slate-100 pt-5">
-              <div class="flex items-center justify-between gap-3 text-xs text-heading-3">
-                <span>Verified Google review style</span>
-                <span class="font-semibold text-slate-500">5.0 rating</span>
-              </div>
-            </div>
           </div>
         ))
       }

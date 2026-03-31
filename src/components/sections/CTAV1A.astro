@@ -5,9 +5,11 @@ import Paragraph from "../shared/Paragraph.astro";
 
 export interface Props {
   className?: string;
+  audience?: "tradie" | "business";
+  thankYouPath?: string;
 }
 
-const { className } = Astro.props;
+const { className, audience = "tradie", thankYouPath = "/thank-you" } = Astro.props;
 ---
 
 <section id="cta" class=`pb-20 ${className}`}>
@@ -23,7 +25,9 @@ const { className } = Astro.props;
           <GradiantText>own your area?</GradiantText>
         </h1>
         <Paragraph className="pt-8 font-medium">
-          Most tradies see movement in 30 days. Start with a free look at where you stand on Google — no cost, no obligation.
+          {audience === "tradie"
+            ? "Most tradies see movement in 30 days. Start with a free look at where you stand on Google."
+            : "Most local businesses see movement in 30 days. Start with a free look at where you stand on Google."}
         </Paragraph>
         <div class="mx-auto flex max-w-md flex-col items-center gap-6 pt-10 sm:max-w-xl">
           <a
@@ -35,7 +39,7 @@ const { className } = Astro.props;
             Book Your Free Strategy Call
           </a>
           <a
-            href="/v1a/thank-you"
+            href={thankYouPath}
             class="font-medium text-heading-3 transition hover:text-primary hover:underline"
           >
             Not ready to talk? Request a Free Local Ranking Audit →

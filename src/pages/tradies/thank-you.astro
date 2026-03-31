@@ -1,0 +1,46 @@
+---
+import LayoutV1A from "../../layouts/LayoutV1A.astro";
+import Container from "../../components/shared/Container.astro";
+import Title from "../../components/shared/Title.astro";
+import Paragraph from "../../components/shared/Paragraph.astro";
+import GradiantText from "../../components/shared/GradiantText.astro";
+---
+
+<LayoutV1A
+  title="Thank You | Local Leader"
+  audience="tradie"
+  basePath="/tradies"
+  homePath="/tradies"
+  thankYouPath="/tradies/thank-you"
+>
+  <main class="flex flex-col gap-y-20 overflow-hidden pt-32 pb-20 md:gap-y-32">
+    <section class="relative">
+      <Container className="mx-auto flex max-w-4xl flex-col items-center space-y-8 text-center">
+        <div class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Request Received
+        </div>
+
+        <Title>
+          You&apos;re one step closer to <GradiantText>dominating your local area.</GradiantText>
+        </Title>
+
+        <Paragraph className="text-lg md:text-xl">
+          We&apos;ve received your request for a Local Ranking Audit. While we prepare your custom report, <strong>book your Free Strategy Call below</strong> to go over the results and map out your growth plan.
+        </Paragraph>
+
+        <div class="w-full overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xl">
+          <div class="calendly-inline-widget" data-url="https://calendly.com/reece-localleader/30min" style="min-width:320px;height:700px;"></div>
+        </div>
+
+        <a href="/tradies" class="mt-8 inline-block font-medium text-primary hover:underline">
+          &larr; Back to home
+        </a>
+      </Container>
+    </section>
+  </main>
+
+  <script is:inline type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</LayoutV1A>

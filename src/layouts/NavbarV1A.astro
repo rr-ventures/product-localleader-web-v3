@@ -3,21 +3,28 @@ import Container from "../components/shared/Container.astro";
 import BrandLogo from "../components/shared/BrandLogo.astro";
 import Navitem from "../components/shared/Navitem.astro";
 
+export interface Props {
+  basePath?: string;
+  homePath?: string;
+}
+
+const { basePath = "", homePath = "/" } = Astro.props;
+
 const navItems = [
   {
-    href: "/v1a#how-it-works",
+    href: `${basePath}#how-it-works`,
     text: "How It Works",
   },
   {
-    href: "/v1a#pricing",
+    href: `${basePath}#pricing`,
     text: "Pricing",
   },
   {
-    href: "/v1a#reviews",
+    href: `${basePath}#reviews`,
     text: "Reviews",
   },
   {
-    href: "/v1a#faq",
+    href: `${basePath}#faq`,
     text: "FAQ",
   },
 ];
@@ -27,7 +34,7 @@ const navItems = [
   <Container>
     <nav class="relative flex w-full justify-between gap-6">
       <div class="relative inline-flex min-w-max">
-        <BrandLogo href="/v1a" size="lg" className="relative" />
+        <BrandLogo href={homePath} size="lg" className="relative" />
       </div>
 
       <div

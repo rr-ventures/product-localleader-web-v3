@@ -1,0 +1,26 @@
+---
+import LayoutV1A from "../../layouts/LayoutV1A.astro";
+import HeroV1A from "../../components/sections/HeroV1A.astro";
+import TestimonialsV1A from "../../components/sections/TestimonialsV1A.astro";
+import SolutionsV1A from "../../components/sections/SolutionsV1A.astro";
+import PricingV1A from "../../components/sections/PricingV1A.astro";
+import FAQV1A from "../../components/sections/FAQV1A.astro";
+import CTAV1A from "../../components/sections/CTAV1A.astro";
+---
+
+<LayoutV1A
+  title="Local Leader — Become the #1 Tradie in Your Area"
+  audience="tradie"
+  basePath="/tradies"
+  homePath="/tradies"
+  thankYouPath="/tradies/thank-you"
+>
+  <main class="flex flex-col overflow-x-clip">
+    <HeroV1A className="py-10 md:py-16" audience="tradie" thankYouPath="/tradies/thank-you" />
+    <TestimonialsV1A className="py-10 md:py-16" audience="tradie" />
+    <SolutionsV1A className="pt-10 md:pt-16" audience="tradie" />
+    <PricingV1A className="py-10 md:py-16" audience="tradie" />
+    <FAQV1A className="py-10 md:py-16" audience="tradie" />
+    <CTAV1A className="py-10 md:py-16" audience="tradie" thankYouPath="/tradies/thank-you" />
+  </main>
+</LayoutV1A>

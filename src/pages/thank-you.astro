@@ -1,12 +1,18 @@
 ---
-import LayoutV1A from '../../layouts/LayoutV1A.astro';
-import Container from '../../components/shared/Container.astro';
-import Title from '../../components/shared/Title.astro';
-import Paragraph from '../../components/shared/Paragraph.astro';
-import GradiantText from '../../components/shared/GradiantText.astro';
+import LayoutV1A from "../layouts/LayoutV1A.astro";
+import Container from "../components/shared/Container.astro";
+import Title from "../components/shared/Title.astro";
+import Paragraph from "../components/shared/Paragraph.astro";
+import GradiantText from "../components/shared/GradiantText.astro";
 ---
 
-<LayoutV1A title="Thank You | Local Leader">
+<LayoutV1A
+  title="Thank You | Local Leader"
+  audience="business"
+  basePath="/"
+  homePath="/"
+  thankYouPath="/thank-you"
+>
   <main class="flex flex-col gap-y-20 overflow-hidden pt-32 pb-20 md:gap-y-32">
     <section class="relative">
       <Container className="mx-auto flex max-w-4xl flex-col items-center space-y-8 text-center">
@@ -29,7 +35,7 @@ import GradiantText from '../../components/shared/GradiantText.astro';
           <div class="calendly-inline-widget" data-url="https://calendly.com/reece-localleader/30min" style="min-width:320px;height:700px;"></div>
         </div>
 
-        <a href="/v1a" class="mt-8 inline-block font-medium text-primary hover:underline">
+        <a href="/" class="mt-8 inline-block font-medium text-primary hover:underline">
           &larr; Back to home
         </a>
       </Container>

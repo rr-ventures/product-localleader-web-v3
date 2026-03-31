@@ -1,56 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import LayoutV1A from "../layouts/LayoutV1A.astro";
+import HeroV1A from "../components/sections/HeroV1A.astro";
+import TestimonialsV1A from "../components/sections/TestimonialsV1A.astro";
+import SolutionsV1A from "../components/sections/SolutionsV1A.astro";
+import PricingV1A from "../components/sections/PricingV1A.astro";
+import FAQV1A from "../components/sections/FAQV1A.astro";
+import CTAV1A from "../components/sections/CTAV1A.astro";
 ---
 
-<Layout title="Local Leader Designs">
-  <main class="flex min-h-screen items-center justify-center bg-gray-50 px-4 py-10 sm:p-6">
-    <div class="w-full max-w-5xl rounded-2xl bg-white p-6 text-center shadow-xl sm:p-8">
-      <h1 class="mb-2 text-3xl font-bold text-gray-900">Local Leader Designs</h1>
-      <p class="mb-8 text-gray-600">Six live landing page versions, each with its own design direction.</p>
-
-      <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        <a href="/v1" class="block p-6 rounded-xl border-2 border-gray-100 hover:border-primary hover:shadow-md transition-all duration-200 group">
-          <div class="mb-3 inline-flex rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-700">Live</div>
-          <h2 class="text-xl font-semibold text-gray-800 group-hover:text-primary mb-2">Version 1</h2>
-          <p class="text-gray-500 text-sm">Original shared-layout landing page with the current premium SaaS refresh.</p>
-        </a>
-
-        <a href="/v1a" class="block p-6 rounded-xl border-2 border-gray-100 hover:border-primary hover:shadow-md transition-all duration-200 group">
-          <div class="mb-3 inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-700">New Variant</div>
-          <h2 class="text-xl font-semibold text-gray-800 group-hover:text-primary mb-2">Version 1A</h2>
-          <p class="text-gray-500 text-sm">A tuned spin-off of v1 with a larger floating proof image, more Google-like reviews, refined pillar cards, and updated pricing polish.</p>
-        </a>
-
-        <a href="/v2" class="block p-6 rounded-xl border-2 border-gray-100 hover:border-primary hover:shadow-md transition-all duration-200 group">
-          <div class="mb-3 inline-flex rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-700">Live</div>
-          <h2 class="text-xl font-semibold text-gray-800 group-hover:text-primary mb-2">Version 2</h2>
-          <p class="text-gray-500 text-sm">Renamed from the previous v3. Clean premium aesthetic with minimal cards and soft blur treatments.</p>
-        </a>
-
-        <a href="/v3" class="block p-6 rounded-xl border-2 border-gray-100 hover:border-primary hover:shadow-md transition-all duration-200 group">
-          <div class="mb-3 inline-flex rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-700">Live</div>
-          <h2 class="text-xl font-semibold text-gray-800 group-hover:text-primary mb-2">Version 3</h2>
-          <p class="text-gray-500 text-sm">Premium minimal aesthetic with transparent proof-stack hero, visible texture, and two-offer pricing.</p>
-        </a>
-
-        <a href="/v4" class="block p-6 rounded-xl border-2 border-gray-100 hover:border-primary hover:shadow-md transition-all duration-200 group">
-          <div class="mb-3 inline-flex rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-700">Live</div>
-          <h2 class="text-xl font-semibold text-gray-800 group-hover:text-primary mb-2">Version 4</h2>
-          <p class="text-gray-500 text-sm">Premium product-like aesthetic with transparent proof-stack hero, visible texture, and two-offer pricing.</p>
-        </a>
-
-        <a href="/v5" class="block p-6 rounded-xl border-2 border-gray-100 hover:border-primary hover:shadow-md transition-all duration-200 group">
-          <div class="mb-3 inline-flex rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-700">Live</div>
-          <h2 class="text-xl font-semibold text-gray-800 group-hover:text-primary mb-2">Version 5</h2>
-          <p class="text-gray-500 text-sm">Premium warm aesthetic with transparent proof-stack hero, visible texture, and two-offer pricing.</p>
-        </a>
-
-        <a href="/v10" class="block p-6 rounded-xl border-2 border-gray-100 hover:border-primary hover:shadow-md transition-all duration-200 group">
-          <div class="mb-3 inline-flex rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-700">Live</div>
-          <h2 class="text-xl font-semibold text-gray-800 group-hover:text-primary mb-2">Version 10 (Demo)</h2>
-          <p class="text-gray-500 text-sm">A demonstration build showing what the v3/v4/v5 plans produce in practice.</p>
-        </a>
-      </div>
-    </div>
+<LayoutV1A
+  title="Local Leader — Become the #1 Service Provider in Your Area"
+  audience="business"
+  basePath="/"
+  homePath="/"
+  thankYouPath="/thank-you"
+>
+  <main class="flex flex-col overflow-x-clip">
+    <HeroV1A className="py-10 md:py-16" audience="business" thankYouPath="/thank-you" />
+    <TestimonialsV1A className="py-10 md:py-16" audience="business" />
+    <SolutionsV1A className="pt-10 md:pt-16" audience="business" />
+    <PricingV1A className="py-10 md:py-16" audience="business" />
+    <FAQV1A className="py-10 md:py-16" audience="business" />
+    <CTAV1A className="py-10 md:py-16" audience="business" thankYouPath="/thank-you" />
   </main>
-</Layout>
+</LayoutV1A>

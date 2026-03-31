@@ -3,7 +3,7 @@ import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
 
-import { faqs } from "../../utils/data";
+import { faqs, faqsBusiness } from "../../utils/data";
 import GradiantText from "../shared/GradiantText.astro";
 
 type FAQProps = {
@@ -13,9 +13,11 @@ type FAQProps = {
 
 export interface Props {
   className?: string;
+  audience?: "tradie" | "business";
 }
 
-const { className } = Astro.props;
+const { className, audience = "tradie" } = Astro.props;
+const faqItems = audience === "business" ? faqsBusiness : faqs;
 ---
 
 <section id="faq" class=`${className}`}>
@@ -28,7 +30,7 @@ const { className } = Astro.props;
       class="mx-auto mt-12 grid max-w-3xl divide-y divide-slate-200 overflow-hidden rounded-3xl border border-box-border bg-box-bg shadow-lg"
     >
       {
-        faqs.map((faq: FAQProps) => {
+        faqItems.map((faq: FAQProps) => {
           return (
             <div class="px-8 py-6 transition-colors duration-200 hover:bg-slate-50">
               <div class="flex flex-col gap-3">

@@ -5,15 +5,29 @@ import BrandLogo from "../components/shared/BrandLogo.astro";
 import FooterNav from "../components/shared/FooterNav.astro";
 import Paragraph from "../components/shared/Paragraph.astro";
 
+export interface Props {
+  basePath?: string;
+  homePath?: string;
+  thankYouPath?: string;
+  audience?: "tradie" | "business";
+}
+
+const {
+  basePath = "",
+  homePath = "/",
+  thankYouPath = "/thank-you",
+  audience = "tradie",
+} = Astro.props;
+
 const quickLinks = [
-  { itemText: "How It Works", itemLink: "/v1a#how-it-works" },
-  { itemText: "Pricing", itemLink: "/v1a#pricing" },
-  { itemText: "Reviews", itemLink: "/v1a#reviews" },
-  { itemText: "FAQ", itemLink: "/v1a#faq" },
+  { itemText: "How It Works", itemLink: `${basePath}#how-it-works` },
+  { itemText: "Pricing", itemLink: `${basePath}#pricing` },
+  { itemText: "Reviews", itemLink: `${basePath}#reviews` },
+  { itemText: "FAQ", itemLink: `${basePath}#faq` },
 ];
 
 const getInTouch = [
-  { itemText: "Get a Free Audit", itemLink: "/v1a/thank-you" },
+  { itemText: "Get a Free Audit", itemLink: thankYouPath },
   { itemText: "Book a Strategy Call", itemLink: "https://calendly.com/reece-localleader/30min" },
   { itemText: "Contact Us", itemLink: "mailto:hello@localleader.au" },
 ];
@@ -43,9 +57,9 @@ const getInTouch = [
       <div class="relative grid grid-cols-2 gap-8 lg:grid-cols-3 lg:items-stretch">
         <div class="col-span-2 flex h-auto flex-col lg:col-span-1">
           <div class="h-full">
-            <BrandLogo href="/v1a" size="md" />
+            <BrandLogo href={homePath} size="md" />
             <Paragraph className={"mt-4"}>
-              We make you the #1 tradie in your area — on Google Maps, Google Search, and in reviews.
+              We make you the #1 {audience === "tradie" ? "tradie" : "service provider"} in your area — on Google Maps, Google Search, and in reviews.
             </Paragraph>
             <p class="mt-4 text-sm text-heading-3">
               <a href="https://localleader.au" class="transition hover:text-heading-1">localleader.au</a>
@@ -117,7 +131,7 @@ const getInTouch = [
               Start with a free Google ranking audit — we'll show you exactly where you stand.
             </p>
             <a
-              href="/v1a/thank-you"
+              href={thankYouPath}
               class="mt-4 inline-block rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:scale-105 hover:opacity-90"
             >
               Get Your Free Audit

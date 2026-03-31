@@ -1,19 +1,20 @@
 ---
 import Container from "../shared/Container.astro";
-import { solutions } from "../../utils/data";
+import { solutions, solutionsBusiness } from "../../utils/data";
 
 type SolutionsProps = {
   title: string;
-  painPoint: string;
-  agitatepainPoint: string;
-  solution: string;
+  description: string;
+  icon: string;
 };
 
 export interface Props {
   className?: string;
+  audience?: "tradie" | "business";
 }
 
-const { className } = Astro.props;
+const { className, audience = "tradie" } = Astro.props;
+const sectionSolutions = audience === "business" ? solutionsBusiness : solutions;
 ---
 
 <section id="how-it-works" class=`flex flex-col ${className}`}>
@@ -23,25 +24,46 @@ const { className } = Astro.props;
         Three things that make you <span class="bg-gradient-to-r from-[#1A73E8] via-blue-500 to-[#34A853] bg-clip-text text-transparent">the obvious choice</span>
       </h2>
       <p class="text-heading-3 md:text-lg">
-        Every tradie who gets serious about Google wins in the same three places. Here&apos;s exactly what we do.
+        {audience === "tradie"
+          ? "The best operators win local demand in these three places."
+          : "The best local businesses win demand in these three places."}
       </p>
     </div>
 
     <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
       {
-        solutions.map((solution: SolutionsProps, index: number) => {
+        sectionSolutions.map((solution: SolutionsProps) => {
           return (
             <article class="group relative overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white/95 p-8 shadow-[0_22px_55px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_75px_rgba(15,23,42,0.12)]">
               <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#1A73E8] via-blue-400 to-[#34A853]"></div>
               <div class="absolute -right-10 top-0 h-28 w-28 rounded-full bg-blue-100/70 blur-3xl"></div>
 
               <div class="relative">
-                <div class="flex items-start justify-between gap-5">
-                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-950 text-lg font-bold text-white shadow-lg shadow-slate-900/15">
-                    {index + 1}
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-100/80 bg-gradient-to-br from-white to-blue-50 text-primary shadow-[0_12px_30px_rgba(37,99,235,0.12)]">
+                  <div class:list={{
+                    "hidden": solution.icon !== "map",
+                    "block": solution.icon === "map",
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 20 3 17V4l6 3m0 13 6-3m-6 3V7m6 10 6 3V7l-6-3m0 13V4" />
+                    </svg>
                   </div>
-                  <div class="rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-primary">
-                    Pillar {index + 1}
+                  <div class:list={{
+                    "hidden": solution.icon !== "search",
+                    "block": solution.icon === "search",
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <circle cx="11" cy="11" r="6" />
+                      <path stroke-linecap="round" d="m20 20-3.5-3.5" />
+                    </svg>
+                  </div>
+                  <div class:list={{
+                    "hidden": solution.icon !== "star",
+                    "block": solution.icon === "star",
+                  }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m12 3 2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.8 6.7 19l1-5.8L3.5 9.1l5.9-.9L12 3Z" />
+                    </svg>
                   </div>
                 </div>
 
@@ -49,26 +71,9 @@ const { className } = Astro.props;
                   {solution.title}
                 </h3>
 
-                <div class="mt-6 rounded-[1.5rem] border border-slate-100 bg-slate-50/80 p-5">
-                  <p class="text-[0.72rem] font-bold uppercase tracking-[0.18em] text-slate-400">
-                    What most tradies are dealing with
-                  </p>
-                  <p class="mt-3 text-base font-semibold leading-relaxed text-heading-1">
-                    {solution.painPoint}
-                  </p>
-                  <p class="mt-3 text-sm leading-relaxed text-heading-3">
-                    {solution.agitatepainPoint}
-                  </p>
-                </div>
-
-                <div class="mt-6 rounded-[1.5rem] bg-slate-950 px-5 py-5 text-white shadow-lg shadow-slate-900/10">
-                  <p class="text-[0.72rem] font-bold uppercase tracking-[0.18em] text-blue-200">
-                    How Local Leader fixes it
-                  </p>
-                  <p class="mt-3 text-sm leading-relaxed text-slate-100">
-                    {solution.solution}
-                  </p>
-                </div>
+                <p class="mt-4 text-base leading-relaxed text-heading-3">
+                  {solution.description}
+                </p>
               </div>
             </article>
           );

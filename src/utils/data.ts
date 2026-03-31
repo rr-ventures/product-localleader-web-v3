@@ -1,7 +1,3 @@
-import visibilityDilemma from "../assets/images/visibility-dilemma.jpg";
-import engagementGap from "../assets/images/engagement-gap.jpg";
-import resultsInHibernation from "../assets/images/results-in-hibernation.jpg";
-
 const services = [
   {
     title: "Become #1 — Not Just Get More Leads",
@@ -62,33 +58,42 @@ const services = [
 const solutions = [
   {
     title: "Top of Google Maps",
-    painPoint:
-      "When someone searches for your trade near them, Google shows 3 businesses on the map. If you're not one of them, you're invisible.",
-    agitatepainPoint:
-      "Those top 3 spots get the lion's share of calls — and right now, your competitors are sitting there while you wait for word of mouth. Every day that passes is jobs going to someone else.",
-    solution:
-      "We get your business into the Google Maps top 3 for your trade in your area — and keep it there. Your phone rings from people who are ready to hire, not tyre-kickers scrolling through five quotes.",
-    img: visibilityDilemma,
+    description:
+      "When locals search nearby, we position your business in the Google Maps top 3 so you're seen first and called first. More visibility means more ready-to-book enquiries.",
+    icon: "map",
   },
   {
     title: "First Page of Google",
-    painPoint:
-      "When locals search for your trade in your area, your competitors show up — not you. You're paying for a website that nobody finds.",
-    agitatepainPoint:
-      "Organic search is the highest-quality lead source in the game. These are people actively looking for exactly what you do, right now, in your area. And they're clicking on whoever shows up first.",
-    solution:
-      "We build your organic presence so your business ranks on the first page of Google for the searches that matter. No ad spend. No ongoing cost per click. Just your business showing up every day.",
-    img: engagementGap,
+    description:
+      "We execute SEO strategy each month, build and optimise content, and improve technical signals so your site ranks higher for the searches that matter in your area.",
+    icon: "search",
   },
   {
     title: "5-Star Review Engine",
-    painPoint:
-      "You do great work — but your Google profile has 11 reviews from three years ago. Meanwhile the bloke across town has 80+ and he's half as good.",
-    agitatepainPoint:
-      "Reviews are the first thing people check before they call. A thin review profile kills trust before you've even had a chance to quote. Most tradies know this, but never find the time to fix it.",
-    solution:
-      "We build you a review engine that consistently generates real Google reviews from your happy customers — automatically. More reviews means more trust means more calls. You become the obvious choice before anyone even picks up the phone.",
-    img: resultsInHibernation,
+    description:
+      "We set up a consistent review system that turns happy clients into fresh 5-star proof. Strong review volume and quality increase trust before a customer even calls.",
+    icon: "star",
+  },
+];
+
+const solutionsBusiness = [
+  {
+    title: "Top of Google Maps",
+    description:
+      "When nearby customers search, we position your business in the Google Maps top 3 so you're discovered first and contacted first. Visibility drives qualified enquiries.",
+    icon: "map",
+  },
+  {
+    title: "First Page of Google",
+    description:
+      "We run a monthly SEO strategy, publish and improve ranking-focused content, and strengthen technical SEO so your business climbs higher in local search results.",
+    icon: "search",
+  },
+  {
+    title: "5-Star Review Engine",
+    description:
+      "We build a simple review system that consistently collects recent 5-star feedback from happy clients. More social proof builds trust and improves conversion.",
+    icon: "star",
   },
 ];
 
@@ -104,9 +109,9 @@ const faqs = [
       "We understand — most tradies have been. The difference is what we build. Your Google ranking, your Maps presence, your reviews — these are assets that belong to you. They don't disappear overnight if you stop working with us. We're not renting you leads. We're building something permanent.",
   },
   {
-    question: "Is $999 a month really worth it?",
+    question: "Is $1,499 a month really worth it?",
     answer:
-      "What's your average job worth? One extra job from Google more than covers it. And unlike running ads, there's no ad spend on top. You're paying $999 for three pillars of Google dominance — Maps, Search, and Reviews — all managed and optimised every month.",
+      "What's your average job worth? For most tradies, one extra quality job from Google covers the monthly fee. Unlike ads, there's no extra ad spend stacked on top. You're investing in maps rankings, SEO growth, and a review engine that compounds over time.",
   },
   {
     question: "Can't I just do this myself?",
@@ -131,12 +136,12 @@ const faqs = [
   {
     question: "What exactly do you do each month?",
     answer:
-      "Every month we manage and optimise your Google Business Profile, build local citations across Australian directories, run your review request system, track your rankings, analyse competitor gaps, and send you a plain-English report on what's happened and what's next.",
+      "Every month we run your local SEO strategy, build and optimise ranking-focused content, improve your on-site SEO, manage your Google Business Profile, run your review engine, track rankings, and report clearly on what moved and what's next.",
   },
   {
     question: "Do I need a website to work with you?",
     answer:
-      "Not necessarily. A lot of the Google Maps and review work can be done without a full website. If you do have a site, we'll use it. If you don't, we'll advise you on what makes sense for your situation.",
+      "No — either way works. If you already have a website, we'll optimise it. If you don't, our in-house web design team can design a brand-new site for you and make sure it's built to rank properly.",
   },
   {
     question: "How is Local Leader different from other digital marketing agencies?",
@@ -145,4 +150,57 @@ const faqs = [
   },
 ];
 
-export { services, solutions, faqs };
+const faqsBusiness = [
+  {
+    question: "How long until I see results?",
+    answer:
+      "Most businesses see movement in the first 30 days. Some see enquiry improvements even earlier from Maps work. We don't promise overnight miracles, but we also don't drag things out without traction.",
+  },
+  {
+    question: "I've been burned by marketing agencies before. Why is this different?",
+    answer:
+      "We build durable digital assets you keep: your rankings, your Maps visibility, and your review profile. We're not renting you short-term leads. We're building long-term local authority.",
+  },
+  {
+    question: "Is $1,499 a month really worth it?",
+    answer:
+      "What's one new quality client worth to your business? For most service providers, one extra client from Google covers the monthly fee. You're investing in maps rankings, SEO growth, and review authority that compounds.",
+  },
+  {
+    question: "Can't I just do this myself?",
+    answer:
+      "You can, but consistency is the hard part. Most owners start, then client delivery takes over. We do this every month with a proven process so your growth doesn't stall.",
+  },
+  {
+    question: "I'm too busy right now — do I really need more work?",
+    answer:
+      "Busy periods are exactly when you should strengthen visibility. Demand shifts, referrals fluctuate, and seasons change. Building your pipeline now keeps enquiries steady when things cool down.",
+  },
+  {
+    question: "What industries do you work with?",
+    answer:
+      "We work with local service businesses that rely on nearby customers finding them on Google. If your ideal clients search online before reaching out, we can help.",
+  },
+  {
+    question: "Do I need to sign a contract?",
+    answer:
+      "No lock-in. Month-to-month. You stay because the results are working, not because you're stuck in a long agreement.",
+  },
+  {
+    question: "What exactly do you do each month?",
+    answer:
+      "Each month we run your local SEO strategy, create and optimise ranking content, improve your on-site SEO, manage your Google Business Profile, run your review engine, track ranking movement, and report outcomes clearly.",
+  },
+  {
+    question: "Do I need a website to work with you?",
+    answer:
+      "No — either way is fine. If you already have a website, we'll optimise it. If you don't, our in-house web design team can build a professional site ready for SEO growth.",
+  },
+  {
+    question: "How is Local Leader different from other digital marketing agencies?",
+    answer:
+      "Most agencies sell activity. We focus on becoming the obvious local choice in your market through Maps, Search, and Reviews. We stay organic-first and execution-focused, with reporting in plain English.",
+  },
+];
+
+export { services, solutions, solutionsBusiness, faqs, faqsBusiness };
