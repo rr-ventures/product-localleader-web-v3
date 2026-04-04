@@ -1,0 +1,76 @@
+---
+import FunnelCta from "./FunnelCta.astro";
+
+const faqs = [
+  {
+    question: "How much does it cost?",
+    answer:
+      "Our core package is $1,499/month. No contracts — month-to-month from day one. No ad spend required on top. We also have an early bird rate for founding clients while we build case studies. We'll cover all of this on the call.",
+  },
+  {
+    question: "How long before I see results?",
+    answer:
+      "Most clients start seeing movement in their Google rankings within 4-6 weeks. The review engine starts generating reviews from your first completed job after setup. This isn't overnight magic — it's a system that compounds over time and gets stronger every month.",
+  },
+  {
+    question: "I've been burned by agencies before. How is this different?",
+    answer:
+      "We don't do vague promises or lock you into contracts. You'll get a monthly rank map showing exactly where you sit in Google Maps across your service area. If we're not delivering, you walk. Simple as that.",
+  },
+  {
+    question: "Do I need to do anything?",
+    answer:
+      "Minimal. We handle everything — your Google profile, your website pages, your review system. The main thing we need from you is to keep doing great work for your customers. The review system handles the rest.",
+  },
+  {
+    question: "Do I need to spend money on ads?",
+    answer:
+      "No. Everything in our core offer is organic — Google Maps, Google Search, and reviews. No ad budget required on top of your monthly fee.",
+  },
+  {
+    question: "What trades do you work with?",
+    answer:
+      "Any trade business in Australia — electricians, plumbers, builders, landscapers, painters, roofers, concreters, tilers, HVAC, cleaners, and more. If you're a tradie and you serve a local area, we can help.",
+  },
+];
+---
+
+<section class="py-16 bg-white md:py-20">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-extrabold text-funnel-text md:text-4xl">
+        Common Questions
+      </h2>
+    </div>
+
+    <div class="space-y-3">
+      {faqs.map((faq) => (
+        <details
+          class="group rounded-xl border border-slate-200 bg-funnel-light overflow-hidden"
+          name="faq-accordion"
+        >
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-base font-semibold text-funnel-text transition-colors hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-funnel-primary">
+            <span>{faq.question}</span>
+            <!-- Chevron -->
+            <svg
+              class="faq-chevron h-5 w-5 flex-shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="border-t border-slate-200 px-6 py-5">
+            <p class="text-sm leading-relaxed text-slate-600">{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <div class="mt-12 flex justify-center">
+      <FunnelCta text="Still Have Questions? Book a Call →" />
+    </div>
+  </div>
+</section>

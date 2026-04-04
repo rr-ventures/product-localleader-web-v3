@@ -1,0 +1,19 @@
+---
+---
+
+<footer class="border-t border-slate-200 bg-white py-8">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center gap-1 text-center text-sm text-slate-400">
+      <p>
+        &copy; <span id="funnel-year"></span> Local Leader &mdash;
+        <a href="https://localleader.au" class="underline underline-offset-2 transition hover:text-funnel-primary">localleader.au</a>
+      </p>
+      <p>Built for Australian trade businesses.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const yearEl = document.getElementById("funnel-year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+</script>

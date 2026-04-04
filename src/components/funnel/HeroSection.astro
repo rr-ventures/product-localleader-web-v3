@@ -1,0 +1,183 @@
+---
+import FunnelCta from "./FunnelCta.astro";
+---
+
+<section class="relative overflow-hidden bg-funnel-light pt-16 pb-10 md:pt-20 md:pb-14">
+  <!-- Subtle background texture -->
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(27,73,101,0.06),transparent_40%),radial-gradient(circle_at_90%_80%,rgba(232,145,58,0.06),transparent_40%)]"></div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
+
+      <!-- Left: Text -->
+      <div class="w-full lg:w-1/2 lg:max-w-xl">
+        <!-- Eyebrow -->
+        <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-funnel-primary/20 bg-white px-4 py-1.5 text-sm font-semibold text-funnel-primary shadow-sm">
+          <span class="h-2 w-2 rounded-full bg-funnel-accent"></span>
+          Australian Trade Businesses Only
+        </div>
+
+        <h1 class="text-4xl/tight font-extrabold tracking-tight text-funnel-text sm:text-5xl/tight md:text-6xl/tight">
+          Become the <span class="text-funnel-primary">#1 Tradie</span> in Your Area
+        </h1>
+
+        <p class="mt-5 text-lg font-medium text-slate-600 md:text-xl">
+          There's a reason some tradies are always booked — and it's got nothing to do with how good their work is.
+        </p>
+
+        <p class="mt-4 text-base leading-relaxed text-slate-500">
+          We help Australian trade businesses dominate Google Maps, rank first on Google Search, and build a 5-star review engine — so your phone rings with jobs you actually want. No ad spend. No contracts. Just results that compound every month.
+        </p>
+
+        <div class="mt-8">
+          <FunnelCta text="Book Your Free Strategy Call →" className="w-full sm:w-auto text-lg px-10 py-5" />
+        </div>
+      </div>
+
+      <!-- Right: Google Maps mockup -->
+      <div class="w-full lg:w-1/2 lg:flex lg:justify-end">
+        <div class="relative mx-auto w-full max-w-md">
+          <!-- Glow behind the card -->
+          <div class="absolute -inset-4 rounded-3xl bg-gradient-to-br from-funnel-primary/10 via-transparent to-funnel-accent/10 blur-2xl"></div>
+
+          <!-- Maps UI wrapper -->
+          <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
+            <!-- Fake map header -->
+            <div class="flex items-center gap-2 border-b border-slate-100 bg-white px-4 py-3">
+              <div class="flex gap-1.5">
+                <div class="h-3 w-3 rounded-full bg-red-400"></div>
+                <div class="h-3 w-3 rounded-full bg-yellow-400"></div>
+                <div class="h-3 w-3 rounded-full bg-green-400"></div>
+              </div>
+              <div class="flex flex-1 items-center gap-2 rounded-md bg-slate-100 px-3 py-1.5">
+                <svg class="h-3.5 w-3.5 flex-shrink-0 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="text-xs text-slate-500">electrician near me</span>
+              </div>
+            </div>
+
+            <!-- Map placeholder area -->
+            <div class="relative h-32 overflow-hidden bg-slate-100">
+              <!-- Fake map grid lines -->
+              <svg class="absolute inset-0 h-full w-full opacity-20" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#94a3b8" stroke-width="0.5"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+              </svg>
+              <!-- Fake roads -->
+              <div class="absolute left-0 top-1/3 h-px w-full bg-white opacity-60"></div>
+              <div class="absolute left-0 top-2/3 h-px w-full bg-white opacity-40"></div>
+              <div class="absolute left-1/4 top-0 h-full w-px bg-white opacity-50"></div>
+              <div class="absolute left-3/4 top-0 h-full w-px bg-white opacity-40"></div>
+              <!-- Map pins -->
+              <div class="absolute left-[38%] top-[30%] -translate-x-1/2 -translate-y-full">
+                <svg class="h-8 w-8 drop-shadow-md" viewBox="0 0 24 24" fill="#1B4965" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <div class="absolute -bottom-0.5 left-1/2 -translate-x-1/2 rounded-full bg-funnel-primary/20 px-2 py-0.5 text-[9px] font-bold text-funnel-primary whitespace-nowrap shadow-sm">#1</div>
+              </div>
+              <div class="absolute left-[65%] top-[55%] -translate-x-1/2 -translate-y-full">
+                <svg class="h-6 w-6 drop-shadow-sm opacity-50" viewBox="0 0 24 24" fill="#64748b" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+              </div>
+              <div class="absolute left-[20%] top-[65%] -translate-x-1/2 -translate-y-full">
+                <svg class="h-6 w-6 drop-shadow-sm opacity-40" viewBox="0 0 24 24" fill="#64748b" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Results list -->
+            <div class="divide-y divide-slate-100">
+              <!-- Result 1 — #1 position (highlighted) -->
+              <div class="relative bg-blue-50/60 px-4 py-3.5">
+                <div class="absolute left-0 top-0 bottom-0 w-1 rounded-l-none bg-funnel-primary"></div>
+                <div class="flex items-start gap-3 pl-2">
+                  <div class="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-funnel-primary text-xs font-bold text-white shadow">1</div>
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <p class="text-sm font-bold text-funnel-primary leading-tight">Newcastle Electrical Co.</p>
+                      <span class="rounded-full bg-funnel-primary/10 px-2 py-0.5 text-[10px] font-semibold text-funnel-primary">Your Business</span>
+                    </div>
+                    <div class="mt-1 flex items-center gap-1.5">
+                      <div class="flex text-funnel-accent">
+                        {"★★★★★".split("").map((s) => <span class="text-sm leading-none">{s}</span>)}
+                      </div>
+                      <span class="text-xs font-semibold text-slate-700">4.9</span>
+                      <span class="text-xs text-slate-500">(127 reviews)</span>
+                    </div>
+                    <p class="mt-1 text-xs text-slate-500">Electrician · Open now · Newcastle NSW</p>
+                    <p class="mt-1 text-xs font-medium text-funnel-primary">#1 on Google Maps</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Result 2 -->
+              <div class="px-4 py-3">
+                <div class="flex items-start gap-3">
+                  <div class="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-slate-200 text-xs font-bold text-slate-500">2</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm font-semibold text-slate-700 leading-tight">Hunter Valley Electrical</p>
+                    <div class="mt-0.5 flex items-center gap-1">
+                      <div class="flex text-amber-400">
+                        {"★★★★☆".split("").map((s) => <span class="text-xs leading-none">{s}</span>)}
+                      </div>
+                      <span class="text-xs text-slate-500">4.2 (31 reviews)</span>
+                    </div>
+                    <p class="mt-0.5 text-xs text-slate-400">Electrician · Newcastle NSW</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Result 3 -->
+              <div class="px-4 py-3">
+                <div class="flex items-start gap-3">
+                  <div class="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-slate-200 text-xs font-bold text-slate-500">3</div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm font-semibold text-slate-700 leading-tight">Sparks Electrical Services</p>
+                    <div class="mt-0.5 flex items-center gap-1">
+                      <div class="flex text-amber-400">
+                        {"★★★☆☆".split("").map((s) => <span class="text-xs leading-none">{s}</span>)}
+                      </div>
+                      <span class="text-xs text-slate-500">3.8 (12 reviews)</span>
+                    </div>
+                    <p class="mt-0.5 text-xs text-slate-400">Electrician · Newcastle NSW</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Caption below card -->
+          <p class="mt-3 text-center text-xs text-slate-400">This is what your business looks like at the top of Google Maps</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust strip -->
+    <div class="mt-10 border-t border-slate-200 pt-6">
+      <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-slate-500">
+        <li class="flex items-center gap-1.5">
+          <span class="text-funnel-green font-bold">✓</span> No Contracts
+        </li>
+        <li class="hidden sm:block text-slate-300">•</li>
+        <li class="flex items-center gap-1.5">
+          <span class="text-funnel-green font-bold">✓</span> No Ad Spend Required
+        </li>
+        <li class="hidden sm:block text-slate-300">•</li>
+        <li class="flex items-center gap-1.5">
+          <span class="text-funnel-green font-bold">✓</span> Month-to-Month
+        </li>
+        <li class="hidden sm:block text-slate-300">•</li>
+        <li class="flex items-center gap-1.5">
+          <span class="text-funnel-green font-bold">✓</span> Australian Owned
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -18,6 +18,12 @@ export default {
         "heading-1": "rgb(var(--heading-1))",
         "heading-2": "rgb(var(--heading-2))",
         "heading-3": "rgb(var(--heading-3))",
+        "funnel-primary": "#1B4965",
+        "funnel-accent": "#E8913A",
+        "funnel-text": "#1A1A2E",
+        "funnel-light": "#F7F8FA",
+        "funnel-green": "#16A34A",
+        "funnel-red": "#DC2626",
       },
       screens: {
         midmd: "880px",

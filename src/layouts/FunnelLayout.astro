@@ -1,0 +1,49 @@
+---
+import StickyCta from "../components/funnel/StickyCta.astro";
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Book Your Free Strategy Call — Local Leader",
+  description = "Become the #1 tradie in your area. Local Leader helps Australian trade businesses dominate Google Maps, rank first on Google Search, and build a 5-star review engine. Book your free 15-minute strategy call.",
+} = Astro.props;
+---
+
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon-512.png" />
+    <link rel="apple-touch-icon" href="/favicon-512.png" />
+    <!-- Plus Jakarta Sans typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/custom.css" />
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        color: #1a1a2e;
+        background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body class="overflow-hidden overflow-y-auto bg-white">
+    <slot />
+    <StickyCta />
+  </body>
+  <script>
+    document.documentElement.classList.remove("dark");
+  </script>
+</html>

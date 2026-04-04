@@ -56,4 +56,26 @@ body {
   /* padding: 30px 30px 30px 30px; */
 }
 
+/* Funnel page variables */
+:root {
+  --funnel-primary: #1b4965;
+  --funnel-accent: #e8913a;
+  --funnel-text: #1a1a2e;
+}
+
+.vsl-section--hidden {
+  display: none;
+}
+
+/* FAQ accordion styles */
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary {
+  list-style: none;
+}
+details[open] .faq-chevron {
+  transform: rotate(180deg);
+}
+
 
