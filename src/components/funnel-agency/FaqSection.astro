@@ -1,0 +1,76 @@
+---
+import FunnelCta from "../funnel/FunnelCta.astro";
+
+const faqs = [
+  {
+    question: "How much does it cost?",
+    answer:
+      "Our core package is $1,499/month. No contracts — month-to-month from day one. No ad spend required on top. We also have an early bird rate for founding clients while we build our agency-specific case studies. We'll cover everything on the call.",
+  },
+  {
+    question: "How long before I see results?",
+    answer:
+      "Google Maps rankings typically start moving within 4–6 weeks. The review engine starts generating new reviews from your first completed transactions after setup. Rankings compound over time — unlike portal ads that stop delivering the moment you stop paying.",
+  },
+  {
+    question: "I've been burned by agencies before. How is this different?",
+    answer:
+      "No vague promises and no lock-in contracts. You'll get a monthly rank map showing exactly where you sit for vendor-intent keywords like 'best real estate agent in [suburb]' and 'property appraisal [suburb]' across your service area. If we're not delivering, you walk. Simple as that.",
+  },
+  {
+    question: "Do I need to do anything?",
+    answer:
+      "Minimal. We handle your Google Business Profile, your suburb content pages, your review system, and your monthly reporting. The main thing we need from you is to keep doing great work for your clients — the review system captures that and turns it into Google rankings.",
+  },
+  {
+    question: "Do I need to spend money on ads?",
+    answer:
+      "No. Everything in our core offer is organic — Google Maps, Google Search, and reviews. No portal ad budget, no Facebook spend, and no Google Ads required on top of your monthly fee.",
+  },
+  {
+    question: "What types of agents do you work with?",
+    answer:
+      "Listing agents, buyer's agents, boutique agency operators, and independent agents across Australia. If you serve a local area and want more inbound leads from vendor-intent Google searches — rather than chasing comparison site referrals — we can help.",
+  },
+];
+---
+
+<section class="py-16 bg-white md:py-20">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-extrabold text-funnel-text md:text-4xl">
+        Common Questions
+      </h2>
+    </div>
+
+    <div class="space-y-3">
+      {faqs.map((faq) => (
+        <details
+          class="group rounded-xl border border-slate-200 bg-funnel-light overflow-hidden"
+          name="faq-accordion"
+        >
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-base font-semibold text-funnel-text transition-colors hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-funnel-primary">
+            <span>{faq.question}</span>
+            <!-- Chevron -->
+            <svg
+              class="faq-chevron h-5 w-5 flex-shrink-0 text-slate-400 transition-transform duration-200 group-open:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="border-t border-slate-200 px-6 py-5">
+            <p class="text-sm leading-relaxed text-slate-600">{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <div class="mt-12 flex justify-center">
+      <FunnelCta text="Still Have Questions? Book a Call →" />
+    </div>
+  </div>
+</section>

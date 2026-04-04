@@ -1,0 +1,40 @@
+---
+import FunnelCta from "../funnel/FunnelCta.astro";
+---
+
+<!--
+  VSL SECTION — HIDDEN IN V1
+  To activate: remove the `vsl-section--hidden` class from the <section> element below.
+  Place this section between HeroSection and ProblemSection in localagency.astro.
+  Paste your Wistia embed code inside the #wistia-embed div.
+-->
+<section class="vsl-section--hidden py-16 bg-white">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-extrabold text-funnel-text mb-8 md:text-4xl">
+      Watch: How We Help Agents Dominate Their Area
+    </h2>
+
+    <!-- Wistia embed placeholder -->
+    <div
+      id="wistia-embed"
+      class="relative mx-auto w-full overflow-hidden rounded-2xl bg-slate-100 shadow-xl"
+      style="aspect-ratio: 16/9;"
+    >
+      <!-- PASTE WISTIA EMBED CODE HERE -->
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="text-center">
+          <div class="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-funnel-primary/10">
+            <svg class="h-10 w-10 text-funnel-primary" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+          <p class="text-sm text-slate-400">Video coming soon</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <FunnelCta text="Ready? Book Your Call →" />
+    </div>
+  </div>
+</section>

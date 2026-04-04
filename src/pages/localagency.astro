@@ -1,0 +1,57 @@
+---
+import FunnelLayout from "../layouts/FunnelLayout.astro";
+import HeroSection from "../components/funnel-agency/HeroSection.astro";
+import VslSection from "../components/funnel-agency/VslSection.astro";
+import ProblemSection from "../components/funnel-agency/ProblemSection.astro";
+import PillarsSection from "../components/funnel-agency/PillarsSection.astro";
+import TestimonialsSection from "../components/funnel-agency/TestimonialsSection.astro";
+import ComparisonSection from "../components/funnel-agency/ComparisonSection.astro";
+import QualifySection from "../components/funnel-agency/QualifySection.astro";
+import ProcessSection from "../components/funnel-agency/ProcessSection.astro";
+import FaqSection from "../components/funnel-agency/FaqSection.astro";
+import CalendarSection from "../components/funnel-agency/CalendarSection.astro";
+import FunnelFooter from "../components/funnel-agency/FunnelFooter.astro";
+---
+
+<FunnelLayout
+  title="Become the #1 Agent in Your Area — Book a Free Strategy Call"
+  description="Local Leader helps Australian real estate agents dominate Google Maps, rank first on Google Search, and build a 5-star review engine. Book your free 15-minute strategy call."
+>
+  <main>
+    <!-- S1: Hero -->
+    <HeroSection />
+
+    <!--
+      S7: VSL Section (hidden in v1)
+      To activate: remove the `vsl-section--hidden` class in VslSection.astro
+    -->
+    <VslSection />
+
+    <!-- S2: Problem Agitation -->
+    <ProblemSection />
+
+    <!-- S3: Three Pillars -->
+    <PillarsSection />
+
+    <!-- S4: Social Proof / Testimonials -->
+    <TestimonialsSection />
+
+    <!-- S5: Old Way vs. New Way -->
+    <ComparisonSection />
+
+    <!-- S6: Who It's For / Who It's Not For -->
+    <QualifySection />
+
+    <!-- S8: How It Works -->
+    <ProcessSection />
+
+    <!-- S9: FAQ -->
+    <FaqSection />
+
+    <!-- S10: Calendar Booking (all CTAs scroll here) -->
+    <CalendarSection />
+  </main>
+
+  <!-- S11: Footer -->
+  <FunnelFooter />
+</FunnelLayout>

@@ -1,6 +1,6 @@
 ---
 import Container from "../shared/Container.astro";
-import { solutions, solutionsBusiness } from "../../utils/data";
+import { solutions, solutionsBusiness, solutionsAgency } from "../../utils/data";
 
 type SolutionsProps = {
   title: string;
@@ -10,11 +10,11 @@ type SolutionsProps = {
 
 export interface Props {
   className?: string;
-  audience?: "tradie" | "business";
+  audience?: "tradie" | "business" | "agency";
 }
 
 const { className, audience = "tradie" } = Astro.props;
-const sectionSolutions = audience === "business" ? solutionsBusiness : solutions;
+const sectionSolutions = audience === "business" ? solutionsBusiness : audience === "agency" ? solutionsAgency : solutions;
 ---
 
 <section id="how-it-works" class=`flex flex-col ${className}`}>
@@ -26,6 +26,8 @@ const sectionSolutions = audience === "business" ? solutionsBusiness : solutions
       <p class="text-heading-3 md:text-lg">
         {audience === "tradie"
           ? "The best operators win local demand in these three places."
+          : audience === "agency"
+          ? "The top agents in every suburb win new listings in these three places."
           : "The best local businesses win demand in these three places."}
       </p>
     </div>

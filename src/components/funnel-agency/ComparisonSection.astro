@@ -1,0 +1,72 @@
+---
+import FunnelCta from "../funnel/FunnelCta.astro";
+
+const rows = [
+  {
+    old: "Paying $3K+/month to portals that don't generate vendor leads",
+    newWay: "Vendors find YOU directly on Google",
+  },
+  {
+    old: "Racing to the bottom on OpenAgent and RateMyAgent",
+    newWay: "Clients choose you as the local authority",
+  },
+  {
+    old: "Hoping for referrals that dry up in slow markets",
+    newWay: "5-star reviews do the selling for you",
+  },
+  {
+    old: "No idea if marketing is actually working",
+    newWay: "Monthly rank maps show exactly where you stand",
+  },
+  {
+    old: "Locked into 12-month agency retainers",
+    newWay: "Month-to-month. We keep you because we get results.",
+  },
+  {
+    old: "Prospecting 4+ hours a day just to fill the pipeline",
+    newWay: "Inbound appraisal requests on autopilot",
+  },
+];
+---
+
+<section class="py-16 bg-funnel-light md:py-20">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-extrabold text-funnel-text md:text-4xl">
+        There's a Better Way to Win Listings
+      </h2>
+    </div>
+
+    <!-- Column headers -->
+    <div class="mb-4 grid grid-cols-2 gap-4">
+      <div class="flex items-center gap-2 rounded-xl bg-red-50 px-5 py-3 border border-red-100">
+        <span class="text-lg">❌</span>
+        <span class="font-bold text-red-700 text-sm sm:text-base">The Old Way</span>
+      </div>
+      <div class="flex items-center gap-2 rounded-xl bg-green-50 px-5 py-3 border border-green-100">
+        <span class="text-lg">✅</span>
+        <span class="font-bold text-funnel-green text-sm sm:text-base">The Local Leader Way</span>
+      </div>
+    </div>
+
+    <!-- Rows -->
+    <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      {rows.map((row, i) => (
+        <div class={`grid grid-cols-2 gap-0 divide-x divide-slate-100 ${i !== rows.length - 1 ? "border-b border-slate-100" : ""}`}>
+          <div class="flex items-center gap-3 px-5 py-4 bg-red-50/30">
+            <span class="flex-shrink-0 text-red-400 text-sm" aria-hidden="true">✕</span>
+            <span class="text-sm text-slate-600 leading-snug">{row.old}</span>
+          </div>
+          <div class="flex items-center gap-3 px-5 py-4 bg-green-50/30">
+            <span class="flex-shrink-0 text-funnel-green text-sm font-bold" aria-hidden="true">✓</span>
+            <span class="text-sm font-medium text-slate-700 leading-snug">{row.newWay}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 flex justify-center">
+      <FunnelCta text="Make the Switch — Book a Call →" />
+    </div>
+  </div>
+</section>

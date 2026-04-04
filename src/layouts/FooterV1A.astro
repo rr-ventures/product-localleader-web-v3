@@ -9,7 +9,7 @@ export interface Props {
   basePath?: string;
   homePath?: string;
   thankYouPath?: string;
-  audience?: "tradie" | "business";
+  audience?: "tradie" | "business" | "agency";
 }
 
 const {
@@ -59,7 +59,7 @@ const getInTouch = [
           <div class="h-full">
             <BrandLogo href={homePath} size="md" />
             <Paragraph className={"mt-4"}>
-              We make you the #1 {audience === "tradie" ? "tradie" : "service provider"} in your area — on Google Maps, Google Search, and in reviews.
+              We make you the #1 {audience === "tradie" ? "tradie" : audience === "agency" ? "agent" : "service provider"} in your area — on Google Maps, Google Search, and in reviews.
             </Paragraph>
             <p class="mt-4 text-sm text-heading-3">
               <a href="https://localleader.au" class="transition hover:text-heading-1">localleader.au</a>

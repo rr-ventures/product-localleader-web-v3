@@ -8,7 +8,7 @@ import mapsBeforeAfter from "../../../public/images/before-after-maps-transparen
 
 export interface Props {
   className?: string;
-  audience?: "tradie" | "business";
+  audience?: "tradie" | "business" | "agency";
   thankYouPath?: string;
 }
 
@@ -26,14 +26,16 @@ const {
     <div
       class="relative mx-auto flex max-w-3xl flex-col items-center text-center lg:mx-0 lg:w-[48%] lg:max-w-none lg:items-start lg:py-7 lg:text-left xl:py-8"
     >
-      <h1
+        <h1
         class="text-4xl/tight font-bold tracking-tight text-heading-1 sm:text-5xl/tight md:text-6xl/tight xl:text-7xl/tight"
       >
-        Become the <GradiantText>#1 {audience === "tradie" ? "tradie" : "service provider"}</GradiantText> in your area.
+        Become the <GradiantText>#1 {audience === "tradie" ? "tradie" : audience === "agency" ? "agent" : "service provider"}</GradiantText> in your area.
       </h1>
       <Paragraph className="mt-8 text-lg text-heading-3 md:text-xl">
         {audience === "tradie"
           ? "What if your pipeline never went quiet again? There's a reason some tradies never run out of work - and it's not word of mouth."
+          : audience === "agency"
+          ? "What if vendors came to you instead of the other way around? There's a reason some agents have sellers calling them first — and it's not letterbox drops."
           : "What if your pipeline never went quiet again? There's a reason some local businesses never run out of work - and it's not word of mouth."}
       </Paragraph>
 

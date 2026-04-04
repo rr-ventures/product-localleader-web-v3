@@ -3,7 +3,7 @@ import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 import Title from "../shared/Title.astro";
 
-import { faqs, faqsBusiness } from "../../utils/data";
+import { faqs, faqsBusiness, faqsAgency } from "../../utils/data";
 import GradiantText from "../shared/GradiantText.astro";
 
 type FAQProps = {
@@ -13,11 +13,11 @@ type FAQProps = {
 
 export interface Props {
   className?: string;
-  audience?: "tradie" | "business";
+  audience?: "tradie" | "business" | "agency";
 }
 
 const { className, audience = "tradie" } = Astro.props;
-const faqItems = audience === "business" ? faqsBusiness : faqs;
+const faqItems = audience === "business" ? faqsBusiness : audience === "agency" ? faqsAgency : faqs;
 ---
 
 <section id="faq" class=`${className}`}>

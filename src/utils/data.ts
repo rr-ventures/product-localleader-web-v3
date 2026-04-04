@@ -203,4 +203,113 @@ const faqsBusiness = [
   },
 ];
 
-export { services, solutions, solutionsBusiness, faqs, faqsBusiness };
+const solutionsAgency = [
+  {
+    title: "Top of Google Maps",
+    description:
+      "When a potential vendor searches 'best real estate agent near me,' Google shows 3 results on the map. If you're not in those top 3, you're losing listing presentations you didn't even know you were invited to. We get you there — and keep you there.",
+    icon: "map",
+  },
+  {
+    title: "First Page of Google",
+    description:
+      "When sellers search 'property appraisal [suburb]' or 'sell my house [suburb],' you show up first. Not the franchise down the street. Not a comparison site. You. Vendor-intent organic traffic that brings appraisal requests every day.",
+    icon: "search",
+  },
+  {
+    title: "5-Star Review Engine",
+    description:
+      "We build you a system that generates real Google reviews from happy clients — consistently, automatically. 84% of vendors shortlist agents based on their Google presence before making a single phone call. More reviews means more trust means more appraisals.",
+    icon: "star",
+  },
+];
+
+const testimonialsAgency = [
+  {
+    quote:
+      "Within 6 weeks of optimising my Google profile, I was getting 3–4 appraisal requests a week from people who found me directly — not through OpenAgent.",
+    name: "James R.",
+    trade: "Listing Agent",
+    location: "Northern Beaches, NSW",
+    reviewAge: "1 week ago",
+  },
+  {
+    quote:
+      "I'd been paying $300/month to RateMyAgent and getting nothing but price-shoppers. Now vendors call me because I'm the top-ranked agent in my suburb on Google.",
+    name: "Michelle K.",
+    trade: "Buyer's Agent",
+    location: "Gold Coast, QLD",
+    reviewAge: "2 weeks ago",
+  },
+  {
+    quote:
+      "We went from 22 Google reviews to 89 in three months. My phone rings before I even start prospecting in the morning.",
+    name: "Daniel S.",
+    trade: "Sales Agent",
+    location: "Melbourne, VIC",
+    reviewAge: "3 weeks ago",
+  },
+  {
+    quote:
+      "I'd been burned by two generic agencies before. These guys actually understand real estate — and showed me the data from day one. No BS.",
+    name: "Sarah L.",
+    trade: "Independent Agent",
+    location: "Brisbane, QLD",
+    reviewAge: "1 month ago",
+  },
+];
+
+const faqsAgency = [
+  {
+    question: "How long until I see results?",
+    answer:
+      "Google Maps rankings typically start moving within 4–6 weeks. The review engine starts generating new reviews from your first completed transactions after setup. Unlike portal ads or comparison site fees, every month of work compounds — your rankings get stronger over time, not weaker.",
+  },
+  {
+    question: "I've been burned by marketing agencies before. Why is this different?",
+    answer:
+      "We understand — most agents have. The difference is what we measure. You'll get a monthly rank map showing exactly where you sit for vendor-intent keywords like 'best real estate agent in [suburb]' and 'property appraisal [suburb]' across your service area. No vague impressions reports. No vanity metrics. We're month-to-month — if we're not delivering, you walk.",
+  },
+  {
+    question: "Is $1,499 a month really worth it?",
+    answer:
+      "One extra listing from an inbound Google lead covers 6–12 months of the service fee. At $900K sale price and 2.2% commission, that's roughly $20K GCI from a single transaction. Compare that to the $3,000–$4,000/month agents already pay in portal fees that don't build any lasting digital asset. The ROI math is asymmetric.",
+  },
+  {
+    question: "I get all my business from referrals — do I really need this?",
+    answer:
+      "Referrals are unscalable and unpredictable. They dry up during slow markets and when you stop actively networking. Agents who rely solely on referrals have no inbound engine running when they need it most. Competitors who invest in local SEO are compounding their advantage every month — while referral-dependent agents are grinding outbound prospecting.",
+  },
+  {
+    question: "Can't I just do this myself?",
+    answer:
+      "You could. Most agents try, then a listing presentation takes over, then auction prep, then settlement follow-ups — and it never gets done. We run this process every month with a system built specifically for real estate. The consistency is the asset.",
+  },
+  {
+    question: "I'm too busy right now — do I really need more appraisals?",
+    answer:
+      "The best time to build this is when you're busy. Market conditions shift, vendor confidence fluctuates, and the pipeline you build now is what keeps your phone ringing during the next slow patch. Don't wait until it's quiet to start.",
+  },
+  {
+    question: "What types of agents do you work with?",
+    answer:
+      "Listing agents, buyer's agents, boutique agency operators, and independent agents across Australia. If you serve a local area and want more inbound leads from vendor-intent Google searches rather than chasing comparison site referrals, we can help.",
+  },
+  {
+    question: "Do I need to sign a contract?",
+    answer:
+      "No lock-in. Month-to-month from day one. We're confident enough in what we do that we don't need to trap you in a 12-month retainer to keep your business.",
+  },
+  {
+    question: "What exactly do you do each month?",
+    answer:
+      "Every month we run your local SEO strategy, build and optimise vendor-intent content for your suburbs, manage your Google Business Profile, run your review engine, track keyword rankings, and send you a plain-English rank map showing exactly where you sit across your service area.",
+  },
+  {
+    question: "How is Local Leader different from other digital marketing agencies?",
+    answer:
+      "Most agencies apply generic SEO to agent websites and report on traffic. We focus on vendor-intent keyword dominance — the searches that actually generate appraisal requests, not buyer inquiries. We're real estate specific, organic-first, and we measure success by appraisal volume, not website traffic.",
+  },
+];
+
+export { services, solutions, solutionsBusiness, faqs, faqsBusiness, solutionsAgency, testimonialsAgency, faqsAgency };

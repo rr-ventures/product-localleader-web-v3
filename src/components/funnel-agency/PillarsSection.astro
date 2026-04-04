@@ -1,0 +1,45 @@
+---
+import FunnelCta from "../funnel/FunnelCta.astro";
+
+const pillars = [
+  {
+    emoji: "📍",
+    title: "Top of Google Maps",
+    body: "When a vendor searches \"best real estate agent near me,\" Google shows 3 agents on the map. If you're not in those top 3, you're losing listing presentations before they even happen. We get you there — and keep you there.",
+  },
+  {
+    emoji: "🔍",
+    title: "First Page of Google",
+    body: "When potential sellers search \"sell my house [suburb]\" or \"property appraisal [suburb],\" you show up first. Not the franchise. Not a comparison site. You. Organic vendor-intent traffic that brings appraisal requests every single day.",
+  },
+  {
+    emoji: "⭐",
+    title: "5-Star Review Engine",
+    body: "We build you a system that generates real Google reviews from happy clients — consistently, automatically. 84% of vendors shortlist agents based on their Google presence before making a single phone call. More reviews means more trust means more appraisals.",
+  },
+];
+---
+
+<section class="py-16 bg-funnel-light md:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-funnel-text md:text-4xl">
+        How We Make You the #1 Agent in Your Area
+      </h2>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-3">
+      {pillars.map((pillar) => (
+        <div class="flex flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-shadow hover:shadow-md">
+          <div class="mb-4 text-4xl" aria-hidden="true">{pillar.emoji}</div>
+          <h3 class="text-xl font-bold text-funnel-primary mb-3">{pillar.title}</h3>
+          <p class="text-sm leading-relaxed text-slate-600 flex-1">{pillar.body}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 flex justify-center">
+      <FunnelCta text="See How It Works For Your Market — Book a Call →" />
+    </div>
+  </div>
+</section>

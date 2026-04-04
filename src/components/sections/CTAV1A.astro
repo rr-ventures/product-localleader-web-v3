@@ -5,7 +5,7 @@ import Paragraph from "../shared/Paragraph.astro";
 
 export interface Props {
   className?: string;
-  audience?: "tradie" | "business";
+  audience?: "tradie" | "business" | "agency";
   thankYouPath?: string;
 }
 
@@ -27,6 +27,8 @@ const { className, audience = "tradie", thankYouPath = "/thank-you" } = Astro.pr
         <Paragraph className="pt-8 font-medium">
           {audience === "tradie"
             ? "Most tradies see movement in 30 days. Start with a free look at where you stand on Google."
+            : audience === "agency"
+            ? "Most agents see movement in 30 days. Start with a free look at where you stand for vendor-intent searches in your suburb."
             : "Most local businesses see movement in 30 days. Start with a free look at where you stand on Google."}
         </Paragraph>
         <div class="mx-auto flex max-w-md flex-col items-center gap-6 pt-10 sm:max-w-xl">

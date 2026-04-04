@@ -1,0 +1,67 @@
+---
+import FunnelCta from "../funnel/FunnelCta.astro";
+
+const forYou = [
+  "You're an agent doing great work but your pipeline depends entirely on outbound prospecting",
+  "You want to be the first agent vendors call when they decide to sell",
+  "You're tired of competing on commission with discount agents from comparison sites",
+  "You want a marketing partner who actually understands real estate, not another generic agency",
+  "You're ready to invest in building a personal brand asset that goes with you wherever you go",
+];
+
+const notForYou = [
+  "You're not willing to commit to at least 3–6 months of consistent growth",
+  "You're looking for a magic overnight fix — leads by tomorrow morning",
+  "You're happy racing to the bottom on commission through comparison sites",
+  "You don't care about building your personal brand beyond the franchise logo",
+  "You're not open to a straight conversation about what's working and what's not",
+];
+---
+
+<section class="py-16 bg-white md:py-20">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-extrabold text-funnel-text md:text-4xl">
+        Is This Right For You?
+      </h2>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2">
+      <!-- For You -->
+      <div class="rounded-2xl border border-green-200 bg-green-50 p-7">
+        <h3 class="mb-5 flex items-center gap-2 text-lg font-bold text-funnel-green">
+          <span class="text-2xl" aria-hidden="true">✅</span>
+          This Is For You If:
+        </h3>
+        <ul class="space-y-3">
+          {forYou.map((item) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 flex-shrink-0 text-funnel-green font-bold text-sm" aria-hidden="true">✅</span>
+              <span class="text-sm text-slate-700 leading-snug">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Not For You -->
+      <div class="rounded-2xl border border-red-200 bg-red-50 p-7">
+        <h3 class="mb-5 flex items-center gap-2 text-lg font-bold text-red-600">
+          <span class="text-2xl" aria-hidden="true">🚫</span>
+          This Is NOT For You If:
+        </h3>
+        <ul class="space-y-3">
+          {notForYou.map((item) => (
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 flex-shrink-0 text-red-500 font-bold text-sm" aria-hidden="true">🚫</span>
+              <span class="text-sm text-slate-700 leading-snug">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 flex justify-center">
+      <FunnelCta text="Sounds Like Me — Book a Call →" />
+    </div>
+  </div>
+</section>
