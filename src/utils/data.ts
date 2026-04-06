@@ -13,7 +13,7 @@ const services = [
     features: [
       "Everything organic — no Google Ads budget",
       "No Facebook spend on top",
-      "Your $999/month does the work",
+      "Your monthly package does the work",
     ],
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" class="w-6 h-6"><path d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.5 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"/></svg>`,
   },
@@ -109,9 +109,9 @@ const faqs = [
       "We understand — most tradies have been. The difference is what we build. Your Google ranking, your Maps presence, your reviews — these are assets that belong to you. They don't disappear overnight if you stop working with us. We're not renting you leads. We're building something permanent.",
   },
   {
-    question: "Is $1,499 a month really worth it?",
+    question: "Is the monthly fee really worth it?",
     answer:
-      "What's your average job worth? For most tradies, one extra quality job from Google covers the monthly fee. Unlike ads, there's no extra ad spend stacked on top. You're investing in maps rankings, SEO growth, and a review engine that compounds over time.",
+      "We currently offer a founding rate well below standard pricing (see the pricing section). What's your average job worth? For most tradies, one extra quality job from Google covers the monthly fee. Unlike ads, there's no extra ad spend stacked on top. You're investing in maps rankings, SEO growth, and a review engine that compounds over time.",
   },
   {
     question: "Can't I just do this myself?",
@@ -162,9 +162,9 @@ const faqsBusiness = [
       "We build durable digital assets you keep: your rankings, your Maps visibility, and your review profile. We're not renting you short-term leads. We're building long-term local authority.",
   },
   {
-    question: "Is $1,499 a month really worth it?",
+    question: "Is the monthly fee really worth it?",
     answer:
-      "What's one new quality client worth to your business? For most service providers, one extra client from Google covers the monthly fee. You're investing in maps rankings, SEO growth, and review authority that compounds.",
+      "We currently offer a founding rate well below standard pricing (see the pricing section). What's one new quality client worth to your business? For most service providers, one extra client from Google covers the monthly fee. You're investing in maps rankings, SEO growth, and review authority that compounds.",
   },
   {
     question: "Can't I just do this myself?",
@@ -271,9 +271,9 @@ const faqsAgency = [
       "We understand — most agents have. The difference is what we measure. You'll get a monthly rank map showing exactly where you sit for vendor-intent keywords like 'best real estate agent in [suburb]' and 'property appraisal [suburb]' across your service area. No vague impressions reports. No vanity metrics. We're month-to-month — if we're not delivering, you walk.",
   },
   {
-    question: "Is $1,499 a month really worth it?",
+    question: "Is the monthly fee really worth it?",
     answer:
-      "One extra listing from an inbound Google lead covers 6–12 months of the service fee. At $900K sale price and 2.2% commission, that's roughly $20K GCI from a single transaction. Compare that to the $3,000–$4,000/month agents already pay in portal fees that don't build any lasting digital asset. The ROI math is asymmetric.",
+      "We currently offer a founding rate well below standard pricing (see the pricing section). One extra listing from an inbound Google lead covers many months of the service fee. At $900K sale price and 2.2% commission, that's roughly $20K GCI from a single transaction. Compare that to the $3,000–$4,000/month agents already pay in portal fees that don't build any lasting digital asset. The ROI math is asymmetric.",
   },
   {
     question: "I get all my business from referrals — do I really need this?",
